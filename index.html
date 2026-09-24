@@ -212,7 +212,7 @@
 
                 <div class="grid-personajes">
                     <div class="personaje-card" onclick="alert('👴 ¡Es el Abuelo Simpson? No, ¡es Ralph Wiggum! ¡Te ganaste un premio por tu honestidad!')">
-                        <img src="springfield-web/ralph.png" alt="Abuelo" class="personaje-img">
+                        <img src="springfield-web/abuelo.png" alt="Abuelo" class="personaje-img">
                         <h3 style="margin:5px 0 0 0; font-size: 14px;">Abuelo</h3>
                     </div>
 
