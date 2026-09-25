@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Maggie (Celeste) - Donuts&Code</title>
+    <style>
+        @keyframes moverNubesVector {
+            0% { background-position: 0 0; }
+            100% { background-position: 600px 0; }
+        }
+        body {
+            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', Arial, sans-serif;
+            background-color: #6bc5ff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='350' viewBox='0 0 500 350'%3E%3Cpath d='M60,120 C60,95 90,85 110,95 C125,70 160,70 180,95 C205,80 235,100 230,130 C250,140 250,180 225,190 C190,210 100,210 75,180 C55,165 55,135 60,120 Z' fill='%23ffffff'/%3E%3Cpath d='M320,60 C320,40 345,30 365,42 C380,25 415,25 430,42 C455,30 485,50 480,75 C500,85 500,125 475,135 C440,155 355,155 335,130 C315,115 315,75 320,60 Z' fill='%23ffffff' opacity='0.9'/%3E%3C/svg%3E");
+            background-size: 500px 350px;
+            animation: moverNubesVector 30s linear infinite;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container { max-width: 750px; margin: 0 auto; }
+        h1 {
+            color: #000000; font-size: 38px; font-weight: 900;
+            text-shadow: 2px 2px 0px #fff, -2px -2px 0px #fff, 2px -2px 0px #fff, -2px 2px 0px #fff;
+            margin-bottom: 20px;
+        }
+        .tarjeta-perfil {
+            background-color: #ffde00; border: 4px solid #000; border-radius: 20px;
+            margin: 20px auto; padding: 30px; box-shadow: 6px 6px 0px #000; text-align: left;
+        }
+        h2, h3 { color: #000; font-weight: bold; }
+        p, li { color: #000; font-size: 16px; font-weight: bold; }
+        .avatar-container { text-align: center; margin-bottom: 20px; }
+        .avatar-container img {
+            width: 130px; height: 130px; border: 4px solid #000; border-radius: 50%;
+            background-color: #fff; object-fit: cover; box-shadow: 4px 4px 0px #000;
+        }
+        .btn-interactivo {
+            background-color: #ff99cc; color: #000; font-family: inherit; font-weight: bold;
+            border: 3px solid #000; border-radius: 12px; padding: 12px 20px; cursor: pointer;
+            box-shadow: 3px 3px 0px #000; margin-top: 15px; display: block; width: 100%;
+            font-size: 16px; transition: transform 0.1s;
+        }
+        .btn-interactivo:active { transform: scale(0.98); box-shadow: 1px 1px 0px #000; }
+        .btn-volver {
+            display: inline-block; background-color: #ffde00; color: #000; font-family: inherit;
+            font-weight: bold; border: 3px solid #000; border-radius: 8px; padding: 10px 20px;
+            cursor: pointer; box-shadow: 3px 3px 0px #000; text-decoration: none; margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Perfil de Maggie (Celeste)</h1>
+        <div class="tarjeta-perfil">
+            <div class="avatar-container">
+                <img src="maggie.png" alt="Maggie Simpson" onerror="this.src='https://upload.wikimedia.org/wikipedia/en/9/9d/Maggie_Simpson.png'">
+            </div>
+            <h2 style="text-align: center; font-size: 26px; margin-bottom: 15px;">Maggie Simpson</h2>
+            <p><strong>Ciudad:</strong> Springfield</p>
+            <p><strong>Edad:</strong> 1 año</p>
+            
+            <h3 style="margin-top: 20px;">Habilidades:</h3>
+            <ul>
+                <li>Uso experto del chupete</li>
+                <li>Habilidades tácticas secretas</li>
+                <li>Comunicación mediante gestos</li>
+            </ul>
+
+            <!-- Botón extra temático del chupete -->
+            <button class="btn-interactivo" onclick="chupeteAction()">🍼 ¡Hacer sonar el chupete!</button>
+            <p id="mensaje-extra" style="margin-top: 10px; color: #990044; text-align: center;"></p>
+        </div>
+        <div>
+            <a href="index.html" class="btn-volver">⬅ Volver al Inicio</a>
+        </div>
+    </div>
+
+    <script>
+        function chupeteAction() {
+            const sonidos = [
+                "¡*Chup* *Chup*! ¡Sonido de chupete con máxima ternura!",
+                "¡Cuidado, nadie sospecharía que es una experta francotiradora con juguetes!",
+                "¡*Suuup*! ¡Una sonrisa silenciosa que desarma a cualquiera!"
+            ];
+            const elegido = sonidos[Math.floor(Math.random() * sonidos.length)];
+            document.getElementById("mensaje-extra").innerText = elegido;
+        }
+    </script>
+</body>
+</html>
