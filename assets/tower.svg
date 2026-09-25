@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 262" role="img" aria-label="Torre de enfriamiento de la central nuclear">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#8f96a3"/>
+      <stop offset=".45" stop-color="#dfe3ea"/>
+      <stop offset="1" stop-color="#737b8a"/>
+    </linearGradient>
+  </defs>
+  <path d="M44 46 C62 110 66 170 14 252 L186 252 C134 170 138 110 156 46 Z" fill="url(#g)" stroke="#4a505c" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M54 94 Q100 106 146 94 M55 142 Q100 154 145 142 M43 194 Q100 208 157 194" fill="none" stroke="#4a505c" stroke-width="2" opacity=".28"/>
+  <ellipse cx="100" cy="46" rx="56" ry="11" fill="#5b6270" stroke="#4a505c" stroke-width="3"/>
+  <ellipse cx="100" cy="46" rx="44" ry="7" fill="#9ad96b" opacity=".9"/>
+  <circle cx="100" cy="176" r="17" fill="#fed90f" stroke="#1a1a1a" stroke-width="3"/>
+  <g fill="#1a1a1a">
+    <path d="M100 176 L100 160 A16 16 0 0 1 113.9 168 Z"/>
+    <path d="M100 176 L113.9 184 A16 16 0 0 1 86.1 184 Z"/>
+    <path d="M100 176 L86.1 168 A16 16 0 0 1 100 160 Z"/>
+  </g>
+  <circle cx="100" cy="176" r="4" fill="#fed90f" stroke="#1a1a1a" stroke-width="2"/>
+  <rect x="8" y="250" width="184" height="10" rx="3" fill="#5b6270"/>
+</svg>

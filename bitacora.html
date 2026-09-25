@@ -1,33 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora de Desarrollo - Donuts & Code</title>
-    <link rel="stylesheet" href="CSS/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bitácora · Donuts &amp; Code</title>
+  <meta name="description" content="La bitácora de Donuts &amp; Code: cada nube de humo de la chimenea es una reunión.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;800&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/bitacora.css">
 </head>
-<body>
+<body class="log">
 
-    <div class="container">
-        <h1>Bitácora de Desarrollo</h1>
-        
-        <div class="tarjeta" style="width: 800px; text-align: left; padding: 30px;">
-            <h2 style="color: #000; text-align: center;">Registro del Proyecto (TP1)</h2>
-            <hr style="margin: 15px 0;">
-            
-            <h3>1. Organización Inicial y Roles</h3>
-            <p>Se estructuró el sitio web bajo la temática de <strong>Los Simpson</strong> para el grupo <strong>Donuts & Code</strong>.</p>
+  <header class="topbar">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt=""><span>Donuts &amp; Code</span></a>
+    <nav aria-label="Principal">
+      <a href="index.html#casa">← La casa</a>
+      <a href="bitacora.html" aria-current="page">Bitácora</a>
+    </nav>
+  </header>
 
-            <h3 style="margin-top: 15px;">2. Decisiones de Diseño</h3>
-            <p>Se utilizó CSS personalizado con paleta de colores oficial, tarjetas con bordes definidos y tipografía adaptada para evitar solapamientos.</p>
+  <main class="smokeland">
 
-            <h3 style="margin-top: 15px;">3. Interactividad (JavaScript)</h3>
-            <p>Se integraron funciones dinámicas en cada perfil individual (contador de trucos, animación de estiramiento de pelo, visualización de libros y efecto de sonido de chupete).</p>
-        </div>
+    <section class="log-hero">
+      <h1 class="simpsons-title">Bitácora</h1>
+      <p>Cada nube de humo que sale de la chimenea es una reunión. La más reciente sube más alto: bajá hasta la torre para ver cómo empezó todo.</p>
+    </section>
 
-        <div style="margin-top: 30px;">
-            <a href="index.html"><button>Volver al Inicio</button></a>
-        </div>
+    <!-- más reciente arriba · primera reunión pegada a la chimenea -->
+    <ol class="smoke-trail" aria-label="Reuniones, de la más reciente a la más antigua">
+
+      <li class="puff" style="--n:6">
+        <div class="meta"><span class="num">Reunión #6</span><time datetime="2026-09-16">16 sep 2026</time></div>
+        <h2>Retro + nace la landing</h2>
+        <ul>
+          <li>Retro del mes: lo que salió bien, lo que se quemó y cuántas donas se comieron.</li>
+          <li>Diseñamos esta página: la casa, las habitaciones y la chimenea.</li>
+          <li>Maggie eligió el color del botón principal (rosa, obvio).</li>
+        </ul>
+        <ul class="who" aria-label="Asistentes"><li><span class="chip bart">Bart</span></li><li><span class="chip lisa">Lisa</span></li><li><span class="chip marge">Marge</span></li><li><span class="chip maggie">Maggie</span></li></ul>
+      </li>
+
+      <li class="puff" style="--n:5">
+        <div class="meta"><span class="num">Reunión #5</span><time datetime="2026-09-09">9 sep 2026</time></div>
+        <h2>Demo Day en la escuela</h2>
+        <ul>
+          <li>Presentamos el mini juego de Bart ante toda la clase de Skinner.</li>
+          <li>Lisa explicó el algoritmo en 3 minutos y nadie entendió, pero aplaudieron.</li>
+          <li>Registramos 4 bugs nuevos (3 eran features).</li>
+        </ul>
+        <ul class="who" aria-label="Asistentes"><li><span class="chip bart">Bart</span></li><li><span class="chip lisa">Lisa</span></li><li><span class="chip maggie">Maggie</span></li></ul>
+      </li>
+
+      <li class="puff" style="--n:4">
+        <div class="meta"><span class="num">Reunión #4</span><time datetime="2026-09-02">2 sep 2026</time></div>
+        <h2>Code review con Marge</h2>
+        <ul>
+          <li>Marge revisó todos los pull requests con un mate en la mano.</li>
+          <li>Se acordó una regla: <em>nada de commits que digan "arreglos"</em>.</li>
+          <li>Bart prometió no volver a pushear a <code>main</code>. Otra vez.</li>
+        </ul>
+        <ul class="who" aria-label="Asistentes"><li><span class="chip bart">Bart</span></li><li><span class="chip marge">Marge</span></li><li><span class="chip lisa">Lisa</span></li></ul>
+      </li>
+
+      <li class="puff" style="--n:3">
+        <div class="meta"><span class="num">Reunión #3</span><time datetime="2026-08-19">19 ago 2026</time></div>
+        <h2>Maratón de maquetado</h2>
+        <ul>
+          <li>Tres horas de HTML y CSS con pizza y donas de fondo.</li>
+          <li>Lisa descubrió <code>grid</code> y ya no hay vuelta atrás.</li>
+          <li>Maggie acomodó un <code>div</code>. Fue emocionante.</li>
+        </ul>
+        <ul class="who" aria-label="Asistentes"><li><span class="chip lisa">Lisa</span></li><li><span class="chip maggie">Maggie</span></li><li><span class="chip bart">Bart</span></li></ul>
+      </li>
+
+      <li class="puff" style="--n:2">
+        <div class="meta"><span class="num">Reunión #2</span><time datetime="2026-08-12">12 ago 2026</time></div>
+        <h2>Repo y flujo de trabajo</h2>
+        <ul>
+          <li>Creamos el repositorio y armamos las ramas.</li>
+          <li>Marge armó el tablero de tareas con etiquetas de colores.</li>
+          <li>Se probó el primer <em>merge</em>. Sobrevivimos.</li>
+        </ul>
+        <ul class="who" aria-label="Asistentes"><li><span class="chip marge">Marge</span></li><li><span class="chip bart">Bart</span></li><li><span class="chip lisa">Lisa</span></li></ul>
+      </li>
+
+      <li class="puff" style="--n:1">
+        <div class="meta"><span class="num">Reunión #1</span><time datetime="2026-08-05">5 ago 2026</time></div>
+        <h2>Kickoff en el sofá</h2>
+        <ul>
+          <li>Nació el nombre <strong>Donuts &amp; Code</strong> y dibujamos el logo.</li>
+          <li>Regla de oro: quien rompe el build trae las donas.</li>
+          <li>Homer pidió entrar al grupo. Votación: rechazado por unanimidad.</li>
+        </ul>
+        <ul class="who" aria-label="Asistentes"><li><span class="chip bart">Bart</span></li><li><span class="chip lisa">Lisa</span></li><li><span class="chip marge">Marge</span></li><li><span class="chip maggie">Maggie</span></li></ul>
+      </li>
+    </ol>
+
+    <div class="plant-base">
+      <span class="vent" aria-hidden="true"><i></i><i></i><i></i></span>
+      <img src="assets/tower.svg" alt="Torre de enfriamiento de la Central Nuclear de Springfield">
+      <span class="sign pill">Central Nuclear · Springfield</span>
     </div>
+    <div class="ground" aria-hidden="true"></div>
+  </main>
+
+  <footer class="log-foot">
+    <p>Datos de ejemplo: editá cada <code>&lt;li class="puff"&gt;</code> con lo que hicieron de verdad. · <a href="index.html">Volver a la casa</a></p>
+  </footer>
 </body>
 </html>

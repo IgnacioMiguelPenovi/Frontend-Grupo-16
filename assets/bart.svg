@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" role="img" aria-label="Bart">
+  <g transform="translate(0 58)" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <!-- remera -->
+    <path d="M22 210 C22 174 54 158 80 152 L122 152 C148 158 180 174 180 210 Z" fill="#ff6b3d"/>
+    <!-- cuello -->
+    <path d="M85 140 V160 Q101 168 117 160 V140" fill="#fed90f"/>
+    <!-- orejas -->
+    <ellipse cx="52" cy="118" rx="8" ry="10" fill="#fed90f"/>
+    <ellipse cx="151" cy="118" rx="8" ry="10" fill="#fed90f"/>
+    <!-- cabeza con pelo de puas -->
+    <path d="M51 114 C47 102 49 92 55 86 L51 68 L67 74 L71 52 L85 64 L95 44 L107 64 L121 48 L125 68 L141 58 L141 80 L149 86 C155 94 155 104 151 114 C149 140 130 154 101 154 C72 154 53 140 51 114 Z" fill="#fed90f"/>
+    <!-- ojos -->
+    <circle cx="86" cy="100" r="14" fill="#fff"/>
+    <circle cx="116" cy="100" r="14" fill="#fff"/>
+    <circle cx="91" cy="102" r="3.8" fill="#1a1a1a" stroke="none"/>
+    <circle cx="121" cy="102" r="3.8" fill="#1a1a1a" stroke="none"/>
+    <!-- nariz y boca -->
+    <path d="M102 112 C112 112 114 123 105 125" fill="none"/>
+    <path d="M77 132 Q102 152 129 130" fill="none"/>
+    <path d="M77 132 l-4 -4 M129 130 l5 -3" fill="none"/>
+  </g>
+</svg>

@@ -1,0 +1,243 @@
+/* ===== Bitácora: la chimenea de la central nuclear ===== */
+
+.log {
+  background: #232e39;
+}
+
+/* el aire de Springfield: gris arriba, verde radiactivo cerca de la torre */
+.smokeland {
+  position: relative;
+  overflow-x: clip;
+  background: linear-gradient(
+    180deg,
+    #1f2a36 0%,
+    #3a4d55 30%,
+    #5d7b5e 65%,
+    #9cc25a 92%,
+    #b9d96b 100%
+  );
+  padding-top: 92px;
+}
+
+/* ---------- titulo ---------- */
+.log-hero {
+  position: relative;
+  z-index: 3;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px 8px;
+  text-align: center;
+}
+.log-hero h1 { margin: 0; font-size: clamp(2.8rem, 10vw, 5.5rem); transform: rotate(-2deg); }
+.log-hero p {
+  display: inline-block;
+  margin: 18px 0 0;
+  padding: 8px 20px;
+  background: rgba(255, 253, 243, .92);
+  border: 3px solid var(--ink);
+  border-radius: 22px;
+  box-shadow: 0 4px 0 var(--ink);
+  font-weight: 500;
+}
+
+/* ---------- humo = entradas ---------- */
+.smoke-trail {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 34px 0 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.puff {
+  --dx: 0px;
+  /* mas abajo (cerca de la torre) = humo mas oscuro y denso; mas arriba = mas claro */
+  --smoke: color-mix(in srgb, #f6f7fa calc(var(--n) * 13%), #8d95a3);
+  position: relative;
+  isolation: isolate;
+  width: min(600px, calc(100% - 28px));
+  margin-top: -26px;
+  padding: clamp(34px, 6vw, 52px) clamp(30px, 6vw, 58px);
+  color: var(--ink);
+  background: var(--smoke);
+  border-radius: 58% 42% 55% 45% / 52% 58% 42% 48%;
+  box-shadow:
+    inset -14px -18px 30px rgba(60, 70, 90, .28),
+    inset 10px 10px 24px rgba(255, 255, 255, .35),
+    0 10px 26px rgba(0, 0, 0, .3);
+  translate: var(--dx) 0;
+  animation: sway 9s ease-in-out infinite alternate;
+  animation-delay: calc(var(--n) * -1.3s);
+}
+.puff:nth-child(odd)  { --dx: -7%; border-radius: 45% 55% 42% 58% / 58% 46% 54% 42%; }
+.puff:nth-child(even) { --dx:  7%; }
+
+/* bultos que hacen que parezca una nube de humo */
+.puff::before, .puff::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--smoke);
+  border-radius: 50%;
+  box-shadow: inset -8px -10px 18px rgba(60, 70, 90, .25);
+}
+.puff::before { width: 34%; aspect-ratio: 1; top: -16%; left: 8%; }
+.puff::after  { width: 28%; aspect-ratio: 1; bottom: -14%; right: 10%; }
+.puff:nth-child(even)::before { left: auto; right: 12%; }
+.puff:nth-child(even)::after  { right: auto; left: 12%; }
+
+@keyframes sway {
+  to { translate: calc(var(--dx) + 16px) -5px; }
+}
+
+/* los mas nuevos (arriba) aparecen mas grandes y difusos */
+.puff:first-child { width: min(660px, calc(100% - 28px)); }
+
+.puff .meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 12px;
+  margin-bottom: 6px;
+}
+.puff .num {
+  padding: 2px 12px;
+  background: var(--ink);
+  color: var(--yellow);
+  border-radius: 999px;
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: .95rem;
+}
+.puff time { font-weight: 600; font-size: .95rem; }
+
+.puff h2 {
+  margin: 0 0 10px;
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: clamp(1.35rem, 4.5vw, 1.8rem);
+  line-height: 1.15;
+}
+.puff ul { margin: 0 0 12px; padding: 0 0 0 1.2em; }
+.puff li { margin-bottom: 4px; }
+.puff li::marker { content: "🍩  "; }
+
+.puff .who {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.puff .who li { margin: 0; }
+.puff .who li::marker { content: none; }
+.chip {
+  display: inline-block;
+  padding: 1px 12px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-size: .85rem;
+  font-weight: 600;
+}
+.chip.bart   { background: #ffb98a; }
+.chip.lisa   { background: #d6c4f5; }
+.chip.marge  { background: #a9e6a3; }
+.chip.maggie { background: #ffc1dc; }
+
+/* aparecen al pasar por la pantalla (solo donde hay scroll-driven animations) */
+@supports (animation-timeline: view()) {
+  .puff {
+    animation: sway 9s ease-in-out infinite alternate, appear linear both;
+    animation-delay: calc(var(--n) * -1.3s), 0s;
+    animation-timeline: auto, view();
+    animation-range: normal, entry 0% entry 60%;
+  }
+  @keyframes appear { from { opacity: 0; scale: .7; } }
+}
+
+/* ---------- la torre ---------- */
+.plant-base {
+  position: relative;
+  z-index: 1;
+  margin-top: -70px;
+  display: grid;
+  justify-items: center;
+}
+.plant-base img {
+  width: min(380px, 78vw);
+  filter: drop-shadow(0 12px 0 rgba(0, 0, 0, .25));
+}
+.plant-base .sign {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  translate: -50% 0;
+  z-index: 2;
+  white-space: nowrap;
+  background: var(--yellow);
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: clamp(.8rem, 2.6vw, 1.05rem);
+  transform: rotate(-3deg);
+}
+
+/* humo que sale de la boca de la torre y se une a la primera nube */
+.plant-base .vent {
+  position: absolute;
+  z-index: 3;
+  top: 6%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+.plant-base .vent i {
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #cfd4dc;
+  box-shadow: inset -6px -8px 12px rgba(60, 70, 90, .3);
+  animation: vent 5s ease-out infinite;
+  opacity: 0;
+}
+.plant-base .vent i:nth-child(1) { width: 70px; left: -70px; }
+.plant-base .vent i:nth-child(2) { width: 90px; left: -20px; animation-delay: 1.7s; }
+.plant-base .vent i:nth-child(3) { width: 60px; left: -45px; animation-delay: 3.4s; }
+@keyframes vent {
+  0%   { opacity: 0;  transform: translateY(20px) scale(.5); }
+  20%  { opacity: 1; }
+  100% { opacity: 0;  transform: translateY(-120px) scale(1.5); }
+}
+
+.ground {
+  position: relative;
+  z-index: 2;
+  height: 54px;
+  margin-top: -8px;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 26px, rgba(0, 0, 0, .35) 26px 28px) 0 0 / 100% 22px no-repeat,
+    linear-gradient(#4a5a43 0 22px, #2f3a2c 22px);
+  border-top: 4px solid var(--ink);
+}
+
+.log-foot {
+  background: #2f3a2c;
+  color: #e6efd9;
+  text-align: center;
+  padding: 16px 16px 34px;
+  font-weight: 500;
+}
+.log-foot p { margin: 0; }
+.log-foot a { color: var(--yellow); }
+
+@media (max-width: 520px) {
+  .puff:nth-child(odd)  { --dx: -3%; }
+  .puff:nth-child(even) { --dx:  3%; }
+  .puff { margin-top: 8px; padding-bottom: 44px; }
+  .puff::before { top: -10%; }
+}
