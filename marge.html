@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marge · Donuts &amp; Code</title>
+  <meta name="description" content="La habitación de Marge: sus películas y canciones favoritas.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;800&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/room.css">
+</head>
+<body class="room marge">
+
+  <header class="topbar">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt=""><span>Donuts &amp; Code</span></a>
+    <nav aria-label="Principal">
+      <a href="index.html#casa">← La casa</a>
+      <a href="bitacora.html">Bitácora</a>
+    </nav>
+  </header>
+
+  <main class="room-main">
+
+    <div class="stage-frame">
+      <svg class="stage" viewBox="0 0 1000 460" preserveAspectRatio="xMidYMid slice" role="img" aria-label="La cocina de Marge, con la mesada, una caja de donas y una olla">
+        <defs>
+          <pattern id="wall" width="64" height="64" patternUnits="userSpaceOnUse">
+            <rect width="64" height="64" fill="#ffe08a"/>
+            <rect width="32" height="64" fill="#ffd66b"/>
+          </pattern>
+          <pattern id="floor" width="80" height="80" patternUnits="userSpaceOnUse">
+            <rect width="80" height="80" fill="#f5efe0"/>
+            <rect width="40" height="40" fill="#d9603b"/><rect x="40" y="40" width="40" height="40" fill="#d9603b"/>
+          </pattern>
+        </defs>
+        <rect width="1000" height="340" fill="url(#wall)"/>
+        <rect y="340" width="1000" height="120" fill="url(#floor)"/>
+        <rect x="-4" y="326" width="1008" height="16" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
+
+        <!-- alacenas -->
+        <g stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round">
+          <rect x="40" y="40" width="270" height="120" rx="6" fill="#3fa79a"/>
+          <rect x="52" y="52" width="118" height="96" rx="4" fill="#4fbdb0"/>
+          <rect x="180" y="52" width="118" height="96" rx="4" fill="#4fbdb0"/>
+          <circle cx="160" cy="100" r="6" fill="#ffd23f"/><circle cx="190" cy="100" r="6" fill="#ffd23f"/>
+          <!-- reloj -->
+          <circle cx="425" cy="90" r="34" fill="#fff"/>
+          <path d="M425 90 V68 M425 90 L442 98" fill="none" stroke-width="4" stroke-linecap="round"/>
+        </g>
+
+        <!-- ventana -->
+        <image href="assets/room-window.svg" x="760" y="50" width="200" height="211"/>
+        <rect x="742" y="40" width="236" height="9" rx="4" fill="#5a3a2e" stroke="#1a1a1a" stroke-width="3"/>
+        <rect x="748" y="49" width="34" height="220" rx="4" fill="#4bb04a" stroke="#1a1a1a" stroke-width="3"/>
+        <rect x="938" y="49" width="34" height="220" rx="4" fill="#4bb04a" stroke="#1a1a1a" stroke-width="3"/>
+
+        <!-- Marge -->
+        <image class="char" href="assets/marge.svg" x="370" y="54" width="260" height="338"/>
+
+        <!-- mesada -->
+        <g stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round">
+          <!-- caja de donas -->
+          <rect x="196" y="350" width="134" height="30" rx="4" fill="#f7c8dd"/>
+          <circle cx="222" cy="346" r="19" fill="#ffb3d1"/><circle cx="222" cy="346" r="6" fill="#f7c8dd"/>
+          <path d="M211 337 l5 3 M230 335 l-3 5 M231 353 l-5 -2 M213 354 l4 -4" stroke="#fff" stroke-width="3" fill="none"/>
+          <circle cx="262" cy="346" r="19" fill="#c98a5a"/><circle cx="262" cy="346" r="6" fill="#f7c8dd"/>
+          <path d="M251 337 l5 3 M270 335 l-3 5 M271 353 l-5 -2 M253 354 l4 -4" stroke="#fff" stroke-width="3" fill="none"/>
+          <circle cx="302" cy="346" r="19" fill="#ffb3d1"/><circle cx="302" cy="346" r="6" fill="#f7c8dd"/>
+          <path d="M291 337 l5 3 M310 335 l-3 5 M311 353 l-5 -2 M293 354 l4 -4" stroke="#fff" stroke-width="3" fill="none"/>
+          <rect x="196" y="364" width="134" height="16" rx="3" fill="#f7c8dd"/>
+          <!-- olla -->
+          <rect x="694" y="332" width="84" height="48" rx="8" fill="#b0b7c2"/>
+          <path d="M688 342 h-14 M784 342 h14" fill="none" stroke-width="6" stroke-linecap="round"/>
+          <path d="M700 322 h72 q4 0 4 10 h-80 q0 -10 4 -10z" fill="#cdd3dc"/>
+          <path d="M724 306 q-8 -10 0 -20 M748 306 q-8 -10 0 -20" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <!-- mueble -->
+          <rect x="150" y="378" width="700" height="26" rx="6" fill="#f5efe0"/>
+          <rect x="164" y="404" width="672" height="60" fill="#3fa79a"/>
+          <rect x="180" y="414" width="150" height="40" rx="4" fill="#4fbdb0"/>
+          <rect x="344" y="414" width="150" height="40" rx="4" fill="#4fbdb0"/>
+          <rect x="508" y="414" width="150" height="40" rx="4" fill="#4fbdb0"/>
+          <rect x="672" y="414" width="150" height="40" rx="4" fill="#4fbdb0"/>
+          <g fill="#ffd23f"><circle cx="316" cy="434" r="6"/><circle cx="358" cy="434" r="6"/><circle cx="644" cy="434" r="6"/><circle cx="686" cy="434" r="6"/></g>
+        </g>
+      </svg>
+    </div>
+
+    <section class="profile" aria-labelledby="nombre">
+      <div class="who">
+        <h1 id="nombre" class="simpsons-title">Marge Simpson</h1>
+        <p class="role">Tech Lead · DevOps</p>
+        <p class="bio">Mantiene al equipo unido y el deploy en orden. Su peinado tiene espacio para guardar todo el backlog, y siempre hay una dona lista antes de la retro.</p>
+        <ul class="chips" aria-label="Etiquetas">
+          <li>DevOps</li><li>Bash &amp; YAML</li><li>Code review con cariño</li><li>🍩 Chef</li>
+        </ul>
+      </div>
+
+      <div class="lists">
+        <article class="panel movies" aria-labelledby="peli-t">
+          <h2 id="peli-t"><span aria-hidden="true">🎬</span> Películas favoritas</h2>
+          <ol>
+            <li><div><strong>Ratatouille</strong><small>2007 · cocinar es para cualquiera</small></div></li>
+            <li><div><strong>Mamma Mia!</strong><small>2008 · cantada de principio a fin</small></div></li>
+            <li><div><strong>Amélie</strong><small>2001 · pequeños gestos, grandes efectos</small></div></li>
+            <li><div><strong>Orgullo y prejuicio</strong><small>2005 · con té y pañuelos</small></div></li>
+            <li><div><strong>La novicia rebelde</strong><small>1965 · sí, se sabe todas las canciones</small></div></li>
+          </ol>
+        </article>
+
+        <article class="panel songs" aria-labelledby="song-t">
+          <h2 id="song-t"><span aria-hidden="true">🎵</span> Canciones favoritas</h2>
+          <ol>
+            <li><div><strong>Dancing Queen</strong><small>ABBA</small></div></li>
+            <li><div><strong>Here Comes the Sun</strong><small>The Beatles</small></div></li>
+            <li><div><strong>Don't Stop Believin'</strong><small>Journey</small></div></li>
+            <li><div><strong>Ain't No Mountain High Enough</strong><small>Marvin Gaye &amp; Tammi Terrell</small></div></li>
+            <li><div><strong>La vie en rose</strong><small>Édith Piaf</small></div></li>
+          </ol>
+        </article>
+      </div>
+
+      <dl class="facts">
+        <div><dt>Dona favorita</dt><dd>Clásica glaseada rosa</dd></div>
+        <div><dt>Frase típica</dt><dd>“Hmmmmm.”</dd></div>
+        <div><dt>Editor</dt><dd>VS Code, con muchos temas</dd></div>
+      </dl>
+    </section>
+
+    <nav class="visit" aria-label="Otras habitaciones">
+      <h2>Visitá otras habitaciones</h2>
+      <ul>
+        <li><a href="bart.html"><img class="avatar bart" src="assets/bart.svg" alt="">Bart</a></li>
+        <li><a href="lisa.html"><img class="avatar lisa" src="assets/lisa.svg" alt="">Lisa</a></li>
+        <li><a href="maggie.html"><img class="avatar maggie" src="assets/maggie.svg" alt="">Maggie</a></li>
+        <li><a href="bitacora.html"><img class="avatar plant-icon" src="assets/tower.svg" alt="">Bitácora</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer class="room-foot"><p>Hecho con 🍩 por <strong>Donuts &amp; Code</strong> · los datos son inventados, ¡D'oh!</p></footer>
+</body>
+</html>

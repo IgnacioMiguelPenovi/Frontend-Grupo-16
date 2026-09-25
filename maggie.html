@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maggie · Donuts &amp; Code</title>
+  <meta name="description" content="La habitación de Maggie: sus películas y canciones favoritas.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;800&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/room.css">
+</head>
+<body class="room maggie">
+
+  <header class="topbar">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt=""><span>Donuts &amp; Code</span></a>
+    <nav aria-label="Principal">
+      <a href="index.html#casa">← La casa</a>
+      <a href="bitacora.html">Bitácora</a>
+    </nav>
+  </header>
+
+  <main class="room-main">
+
+    <div class="stage-frame">
+      <svg class="stage" viewBox="0 0 1000 460" preserveAspectRatio="xMidYMid slice" role="img" aria-label="La habitación de Maggie, con su cuna, un móvil y bloques con letras">
+        <defs>
+          <pattern id="wall" width="64" height="64" patternUnits="userSpaceOnUse">
+            <rect width="64" height="64" fill="#ffc1dc"/>
+            <path d="M16 8 l3 7 7 1 -5 5 2 7 -7 -4 -7 4 2 -7 -5 -5 7 -1z" fill="#ffe3f0"/>
+            <circle cx="48" cy="44" r="5" fill="#ffe3f0"/>
+          </pattern>
+          <pattern id="floor" width="120" height="60" patternUnits="userSpaceOnUse">
+            <rect width="120" height="60" fill="#f2c9a0"/>
+            <path d="M0 0H120M0 30H120M60 0V30M0 30V60M120 30V60" stroke="#d9a878" stroke-width="3" fill="none"/>
+          </pattern>
+          <pattern id="bars" width="26" height="460" patternUnits="userSpaceOnUse">
+            <rect x="9" width="8" height="460" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
+          </pattern>
+        </defs>
+        <rect width="1000" height="340" fill="url(#wall)"/>
+        <rect y="340" width="1000" height="120" fill="url(#floor)"/>
+        <rect x="-4" y="326" width="1008" height="16" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
+        <ellipse cx="500" cy="420" rx="420" ry="34" fill="#8fd0f0" opacity=".65"/>
+
+        <!-- ventana -->
+        <image href="assets/room-window.svg" x="760" y="50" width="200" height="211"/>
+        <rect x="742" y="40" width="236" height="9" rx="4" fill="#5a3a2e" stroke="#1a1a1a" stroke-width="3"/>
+        <rect x="748" y="49" width="34" height="220" rx="4" fill="#8fd0f0" stroke="#1a1a1a" stroke-width="3"/>
+        <rect x="938" y="49" width="34" height="220" rx="4" fill="#8fd0f0" stroke="#1a1a1a" stroke-width="3"/>
+
+        <!-- movil -->
+        <g stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round">
+          <path d="M170 0 V34" fill="none"/>
+          <g class="swing">
+            <path d="M100 34 H240" fill="none" stroke-width="6" stroke-linecap="round"/>
+            <path d="M112 34 V78 M170 34 V96 M228 34 V74" fill="none" stroke-width="3"/>
+            <path d="M112 78 l7 14 15 2 -11 10 3 15 -14 -8 -14 8 3 -15 -11 -10 15 -2z" fill="#ffd23f" transform="translate(-1 0)"/>
+            <path d="M158 100 a24 24 0 1 0 24 24 a18 18 0 1 1 -24 -24z" fill="#fff5b0" transform="translate(0 -6)"/>
+            <circle cx="228" cy="90" r="16" fill="#ffb3d1"/><circle cx="228" cy="90" r="5" fill="#ffc1dc"/>
+          </g>
+        </g>
+
+        <!-- bloques -->
+        <g stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round" font-size="34" font-weight="800" text-anchor="middle">
+          <rect x="820" y="372" width="60" height="60" fill="#e63946"/><text x="850" y="416" fill="#fff" stroke="none">A</text>
+          <rect x="884" y="372" width="60" height="60" fill="#4a8fe0"/><text x="914" y="416" fill="#fff" stroke="none">B</text>
+          <rect x="852" y="312" width="60" height="60" fill="#ffd23f" transform="rotate(-6 882 342)"/><text x="882" y="356" fill="#1a1a1a" stroke="none" transform="rotate(-6 882 342)">C</text>
+        </g>
+
+        <!-- Maggie -->
+        <image class="char" href="assets/maggie.svg" x="370" y="54" width="260" height="338"/>
+
+        <!-- cuna -->
+        <g stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round">
+          <rect x="234" y="340" width="520" height="120" fill="url(#bars)" stroke="none"/>
+          <rect x="222" y="322" width="544" height="20" rx="10" fill="#fff"/>
+          <rect x="222" y="440" width="544" height="16" rx="8" fill="#fff"/>
+          <rect x="216" y="296" width="24" height="168" rx="10" fill="#fff"/>
+          <rect x="748" y="296" width="24" height="168" rx="10" fill="#fff"/>
+          <circle cx="228" cy="292" r="14" fill="#ffb3d1"/><circle cx="760" cy="292" r="14" fill="#ffb3d1"/>
+        </g>
+      </svg>
+    </div>
+
+    <section class="profile" aria-labelledby="nombre">
+      <div class="who">
+        <h1 id="nombre" class="simpsons-title">Maggie Simpson</h1>
+        <p class="role">Junior Dev · Chupete-Driven Development</p>
+        <p class="bio">Casi no habla, pero sus commits siempre pasan los tests. Aprende más rápido que todos, duerme la siesta durante las daily y nunca suelta el chupete.</p>
+        <ul class="chips" aria-label="Etiquetas">
+          <li>Scratch</li><li>Junior</li><li>Siestas programadas</li><li>Chupete-driven</li>
+        </ul>
+      </div>
+
+      <div class="lists">
+        <article class="panel movies" aria-labelledby="peli-t">
+          <h2 id="peli-t"><span aria-hidden="true">🎬</span> Películas favoritas</h2>
+          <ol>
+            <li><div><strong>Buscando a Nemo</strong><small>2003 · ¡sigue nadando!</small></div></li>
+            <li><div><strong>Toy Story</strong><small>1995 · los juguetes cobran vida</small></div></li>
+            <li><div><strong>Frozen</strong><small>2013 · la vio en loop</small></div></li>
+            <li><div><strong>Moana</strong><small>2016 · el mar la eligió</small></div></li>
+            <li><div><strong>Encanto</strong><small>2021 · sí, hablan de Bruno</small></div></li>
+          </ol>
+        </article>
+
+        <article class="panel songs" aria-labelledby="song-t">
+          <h2 id="song-t"><span aria-hidden="true">🎵</span> Canciones favoritas</h2>
+          <ol>
+            <li><div><strong>Baby Shark</strong><small>Pinkfong</small></div></li>
+            <li><div><strong>Twinkle Twinkle Little Star</strong><small>Canción de cuna</small></div></li>
+            <li><div><strong>Let It Go</strong><small>Idina Menzel</small></div></li>
+            <li><div><strong>We Don't Talk About Bruno</strong><small>Encanto</small></div></li>
+            <li><div><strong>Rock-a-bye Baby</strong><small>Canción de cuna</small></div></li>
+          </ol>
+        </article>
+      </div>
+
+      <dl class="facts">
+        <div><dt>Dona favorita</dt><dd>La que le queda más cerca</dd></div>
+        <div><dt>Frase típica</dt><dd>*chupete chupete*</dd></div>
+        <div><dt>Editor</dt><dd>Uno con letras enormes</dd></div>
+      </dl>
+    </section>
+
+    <nav class="visit" aria-label="Otras habitaciones">
+      <h2>Visitá otras habitaciones</h2>
+      <ul>
+        <li><a href="bart.html"><img class="avatar bart" src="assets/bart.svg" alt="">Bart</a></li>
+        <li><a href="lisa.html"><img class="avatar lisa" src="assets/lisa.svg" alt="">Lisa</a></li>
+        <li><a href="marge.html"><img class="avatar marge" src="assets/marge.svg" alt="">Marge</a></li>
+        <li><a href="bitacora.html"><img class="avatar plant-icon" src="assets/tower.svg" alt="">Bitácora</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer class="room-foot"><p>Hecho con 🍩 por <strong>Donuts &amp; Code</strong> · los datos son inventados, ¡D'oh!</p></footer>
+</body>
+</html>

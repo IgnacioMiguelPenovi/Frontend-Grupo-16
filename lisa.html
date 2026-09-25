@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lisa · Donuts &amp; Code</title>
+  <meta name="description" content="La habitación de Lisa: sus películas y canciones favoritas.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;800&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/room.css">
+</head>
+<body class="room lisa">
+
+  <header class="topbar">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt=""><span>Donuts &amp; Code</span></a>
+    <nav aria-label="Principal">
+      <a href="index.html#casa">← La casa</a>
+      <a href="bitacora.html">Bitácora</a>
+    </nav>
+  </header>
+
+  <main class="room-main">
+
+    <div class="stage-frame">
+      <svg class="stage" viewBox="0 0 1000 460" preserveAspectRatio="xMidYMid slice" role="img" aria-label="La habitación de Lisa, con su escritorio, un saxofón y una biblioteca">
+        <defs>
+          <pattern id="wall" width="64" height="64" patternUnits="userSpaceOnUse">
+            <rect width="64" height="64" fill="#b39ddb"/>
+            <path d="M16 8 l3 7 7 1 -5 5 2 7 -7 -4 -7 4 2 -7 -5 -5 7 -1z" fill="#cbbaea"/>
+            <path d="M48 40 l3 7 7 1 -5 5 2 7 -7 -4 -7 4 2 -7 -5 -5 7 -1z" fill="#cbbaea"/>
+          </pattern>
+          <pattern id="floor" width="120" height="60" patternUnits="userSpaceOnUse">
+            <rect width="120" height="60" fill="#a9724a"/>
+            <path d="M0 0H120M0 30H120M60 0V30M0 30V60M120 30V60" stroke="#82502d" stroke-width="3" fill="none"/>
+          </pattern>
+        </defs>
+        <rect width="1000" height="340" fill="url(#wall)"/>
+        <rect y="340" width="1000" height="120" fill="url(#floor)"/>
+        <rect x="-4" y="326" width="1008" height="16" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
+
+        <!-- biblioteca -->
+        <g stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round">
+          <rect x="40" y="36" width="200" height="292" fill="#8b5a2b"/>
+          <rect x="54" y="50" width="172" height="264" fill="#5a3a2e"/>
+          <g stroke-width="2">
+            <rect x="60" y="76" width="18" height="64" fill="#e63946"/>
+            <rect x="78" y="88" width="14" height="52" fill="#ffd23f"/>
+            <rect x="92" y="70" width="20" height="70" fill="#4a8fe0"/>
+            <rect x="112" y="82" width="16" height="58" fill="#4bb04a"/>
+            <rect x="128" y="74" width="22" height="66" fill="#ff8fb8"/>
+            <rect x="150" y="90" width="16" height="50" fill="#fff"/>
+            <rect x="166" y="78" width="18" height="62" fill="#e63946"/>
+            <rect x="184" y="84" width="14" height="56" fill="#ffd23f"/>
+            <rect x="60" y="168" width="16" height="60" fill="#4bb04a"/>
+            <rect x="76" y="156" width="20" height="72" fill="#fff"/>
+            <rect x="96" y="174" width="14" height="54" fill="#e63946"/>
+            <rect x="110" y="164" width="18" height="64" fill="#4a8fe0"/>
+            <rect x="128" y="170" width="22" height="58" fill="#ffd23f"/>
+            <rect x="150" y="160" width="16" height="68" fill="#ff8fb8"/>
+            <rect x="166" y="178" width="18" height="50" fill="#4bb04a"/>
+            <rect x="184" y="168" width="14" height="60" fill="#4a8fe0"/>
+            <rect x="60" y="246" width="20" height="66" fill="#ffd23f"/>
+            <rect x="80" y="258" width="16" height="54" fill="#e63946"/>
+            <rect x="96" y="240" width="18" height="72" fill="#4a8fe0"/>
+            <rect x="114" y="254" width="14" height="58" fill="#fff"/>
+            <rect x="128" y="250" width="20" height="62" fill="#4bb04a"/>
+            <rect x="148" y="242" width="16" height="70" fill="#e63946"/>
+            <rect x="164" y="260" width="22" height="52" fill="#ff8fb8"/>
+            <rect x="186" y="248" width="14" height="64" fill="#ffd23f"/>
+          </g>
+          <path d="M54 142H226M54 230H226" stroke="#8b5a2b" stroke-width="8"/>
+        </g>
+
+        <!-- ventana -->
+        <image href="assets/room-window.svg" x="760" y="50" width="200" height="211"/>
+        <rect x="742" y="40" width="236" height="9" rx="4" fill="#5a3a2e" stroke="#1a1a1a" stroke-width="3"/>
+        <rect x="748" y="49" width="34" height="220" rx="4" fill="#ff8fb8" stroke="#1a1a1a" stroke-width="3"/>
+        <rect x="938" y="49" width="34" height="220" rx="4" fill="#ff8fb8" stroke="#1a1a1a" stroke-width="3"/>
+
+        <!-- saxofon -->
+        <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M896 246 V350 Q896 398 852 398 Q826 398 826 372" stroke="#1a1a1a" stroke-width="26"/>
+          <path d="M896 246 Q896 222 922 218" stroke="#1a1a1a" stroke-width="20"/>
+          <path d="M896 246 V350 Q896 398 852 398 Q826 398 826 372" stroke="#e0a91c" stroke-width="18"/>
+          <path d="M896 246 Q896 222 922 218" stroke="#e0a91c" stroke-width="12"/>
+        </g>
+        <ellipse cx="826" cy="366" rx="19" ry="12" fill="#f1c232" stroke="#1a1a1a" stroke-width="4"/>
+        <g fill="#fff8d6" stroke="#1a1a1a" stroke-width="2.5"><circle cx="896" cy="276" r="5"/><circle cx="896" cy="302" r="5"/><circle cx="896" cy="328" r="5"/></g>
+
+        <!-- Lisa -->
+        <image class="char" href="assets/lisa.svg" x="370" y="54" width="260" height="338"/>
+
+        <!-- escritorio -->
+        <g stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round">
+          <!-- partitura -->
+          <g transform="translate(580 338) rotate(5)">
+            <rect width="78" height="42" fill="#fff"/>
+            <text x="39" y="32" text-anchor="middle" font-size="30" font-weight="800" fill="#1a1a1a" stroke="none">♪ ♫ ♪</text>
+          </g>
+          <!-- libros -->
+          <rect x="268" y="352" width="84" height="26" fill="#4a8fe0"/>
+          <rect x="276" y="328" width="68" height="24" fill="#ffd23f"/>
+          <!-- lampara -->
+          <path d="M700 378 V332 Q700 306 730 306" fill="none" stroke-width="6" stroke-linecap="round"/>
+          <path d="M716 300 h34 l10 22 h-54 z" fill="#ff8fb8"/>
+          <rect x="236" y="378" width="528" height="26" rx="6" fill="#9575cd"/>
+          <rect x="252" y="404" width="496" height="60" fill="#7e57c2"/>
+          <rect x="272" y="416" width="200" height="38" rx="4" fill="#9575cd"/>
+          <rect x="528" y="416" width="200" height="38" rx="4" fill="#9575cd"/>
+          <circle cx="372" cy="435" r="6" fill="#ffd23f"/><circle cx="628" cy="435" r="6" fill="#ffd23f"/>
+        </g>
+      </svg>
+    </div>
+
+    <section class="profile" aria-labelledby="nombre">
+      <div class="who">
+        <h1 id="nombre" class="simpsons-title">Lisa Simpson</h1>
+        <p class="role">Backend &amp; Jazz · Tech Reviewer</p>
+        <p class="bio">Código limpio, tests que pasan y un solo de saxo cuando el deploy sale bien. Es la que sabe qué hace cada función… y por qué no debería tocarla nadie.</p>
+        <ul class="chips" aria-label="Etiquetas">
+          <li>🎷 Saxo</li><li>Python</li><li>Tests al 100 %</li><li>Vegetariana</li>
+        </ul>
+      </div>
+
+      <div class="lists">
+        <article class="panel movies" aria-labelledby="peli-t">
+          <h2 id="peli-t"><span aria-hidden="true">🎬</span> Películas favoritas</h2>
+          <ol>
+            <li><div><strong>Whiplash</strong><small>2014 · ensayar hasta sangrar los dedos</small></div></li>
+            <li><div><strong>La La Land</strong><small>2016 · llora en la escena del piano</small></div></li>
+            <li><div><strong>Mujercitas</strong><small>2019 · equipo Jo, siempre</small></div></li>
+            <li><div><strong>La sociedad de los poetas muertos</strong><small>1989 · ¡oh capitán, mi capitán!</small></div></li>
+            <li><div><strong>Talentos ocultos</strong><small>2016 · matemática y NASA</small></div></li>
+          </ol>
+        </article>
+
+        <article class="panel songs" aria-labelledby="song-t">
+          <h2 id="song-t"><span aria-hidden="true">🎵</span> Canciones favoritas</h2>
+          <ol>
+            <li><div><strong>Take Five</strong><small>Dave Brubeck Quartet</small></div></li>
+            <li><div><strong>So What</strong><small>Miles Davis</small></div></li>
+            <li><div><strong>Summertime</strong><small>Ella Fitzgerald &amp; Louis Armstrong</small></div></li>
+            <li><div><strong>Clair de Lune</strong><small>Claude Debussy</small></div></li>
+            <li><div><strong>A Love Supreme, Pt. I</strong><small>John Coltrane</small></div></li>
+          </ol>
+        </article>
+      </div>
+
+      <dl class="facts">
+        <div><dt>Dona favorita</dt><dd>Glaseado de frutilla, sin gelatina</dd></div>
+        <div><dt>Frase típica</dt><dd>“Eso no dice la documentación.”</dd></div>
+        <div><dt>Editor</dt><dd>Vim (y no lo discute)</dd></div>
+      </dl>
+    </section>
+
+    <nav class="visit" aria-label="Otras habitaciones">
+      <h2>Visitá otras habitaciones</h2>
+      <ul>
+        <li><a href="bart.html"><img class="avatar bart" src="assets/bart.svg" alt="">Bart</a></li>
+        <li><a href="marge.html"><img class="avatar marge" src="assets/marge.svg" alt="">Marge</a></li>
+        <li><a href="maggie.html"><img class="avatar maggie" src="assets/maggie.svg" alt="">Maggie</a></li>
+        <li><a href="bitacora.html"><img class="avatar plant-icon" src="assets/tower.svg" alt="">Bitácora</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer class="room-foot"><p>Hecho con 🍩 por <strong>Donuts &amp; Code</strong> · los datos son inventados, ¡D'oh!</p></footer>
+</body>
+</html>

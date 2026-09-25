@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donuts &amp; Code · Springfield Dev Crew</title>
+  <meta name="description" content="Landing del grupo Donuts &amp; Code. Entrá a la casa y visitá la habitación de Bart, Marge, Lisa y Maggie.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;800&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body class="home">
+
+  <header class="topbar">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt=""><span>Donuts &amp; Code</span></a>
+    <nav aria-label="Principal">
+      <a href="#casa">La casa</a>
+      <a href="bitacora.html">Bitácora</a>
+    </nav>
+  </header>
+
+  <main class="world">
+
+    <!-- 1 · EL CIELO -->
+    <section class="sky" aria-labelledby="titulo">
+      <div class="sun" aria-hidden="true"></div>
+      <div class="clouds" aria-hidden="true">
+        <i class="cloud" style="--x:4%;  --y:14%; --s:1.5; --t:38s; --dx:70px;  --p:-.5"></i>
+        <i class="cloud" style="--x:62%; --y:8%;  --s:1.1; --t:46s; --dx:-60px; --p:-.9"></i>
+        <i class="cloud" style="--x:78%; --y:46%; --s:1.6; --t:52s; --dx:-80px; --p:-.3"></i>
+        <i class="cloud" style="--x:-4%; --y:60%; --s:1.3; --t:44s; --dx:90px;  --p:-.7"></i>
+        <i class="cloud" style="--x:40%; --y:82%; --s:1.8; --t:60s; --dx:-50px; --p:-.4"></i>
+      </div>
+
+      <div class="hero">
+        <img class="hero-logo" src="assets/logo.png" alt="Logo de Donuts &amp; Code: una dona rosa entre los símbolos &lt; /&gt;">
+        <h1 id="titulo" class="simpsons-title">Donuts <em>&amp;</em> Code</h1>
+        <p class="tagline">El grupo de programación más glaseado de Springfield.</p>
+        <a class="go-down" href="#casa">Bajá a la casa <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <!-- 2 · ATRAVESANDO LAS NUBES -->
+    <section class="descent" aria-labelledby="quienes">
+      <div class="clouds" aria-hidden="true">
+        <i class="cloud" style="--x:6%;  --y:8%;  --s:1.2; --t:40s; --dx:60px;  --p:-.6"></i>
+        <i class="cloud" style="--x:70%; --y:20%; --s:1.7; --t:55s; --dx:-70px; --p:-.2"></i>
+        <i class="cloud" style="--x:20%; --y:62%; --s:1.9; --t:48s; --dx:80px;  --p:-.8"></i>
+        <i class="cloud" style="--x:74%; --y:80%; --s:1.2; --t:42s; --dx:-60px; --p:-.4"></i>
+      </div>
+
+      <div class="about">
+        <h2 id="quienes">¿Quiénes somos?</h2>
+        <p>Cuatro cabezas amarillas, una sola pasión: <strong>programar con una dona en la mano</strong>. Nos juntamos, rompemos el build, lo arreglamos y anotamos todo en la bitácora.</p>
+        <p class="about-note">Seguí bajando: la casa ya se ve entre las nubes.</p>
+      </div>
+    </section>
+
+    <!-- 3 · LA CASA -->
+    <section class="town" id="casa" aria-labelledby="casa-t">
+      <div class="town-head">
+        <h2 id="casa-t" class="simpsons-title">742 Evergreen Terrace</h2>
+        <p class="hint">Tocá una ventana para entrar a la habitación de cada integrante</p>
+      </div>
+
+      <!-- la central nuclear, al fondo: lleva a la bitácora -->
+      <div class="skyline">
+        <a class="plant" href="bitacora.html" aria-label="Bitácora: entrar a la central nuclear">
+          <span class="smoke" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <img src="assets/tower.svg" alt="">
+          <span class="tag pill">☢ Bitácora</span>
+        </a>
+      </div>
+
+      <div class="scene">
+      <div class="hills" aria-hidden="true"></div>
+
+      <div class="house">
+
+        <!-- ala principal: dos pisos -->
+        <div class="wing main">
+          <div class="roof" aria-hidden="true"><span class="chimney"></span></div>
+          <div class="facade">
+            <div class="row up">
+              <a class="window" data-room="bart" href="bart.html" aria-label="Entrar a la habitación de Bart">
+                <span class="frame"><span class="glass"><img src="assets/bart.svg" alt=""></span></span>
+                <span class="name">Bart<small>Chief of Pranks</small></span>
+              </a>
+              <a class="window" data-room="lisa" href="lisa.html" aria-label="Entrar a la habitación de Lisa">
+                <span class="frame"><span class="glass"><img src="assets/lisa.svg" alt=""></span></span>
+                <span class="name">Lisa<small>Backend &amp; Jazz</small></span>
+              </a>
+            </div>
+
+            <div class="row down">
+              <a class="window arch" data-room="marge" href="marge.html" aria-label="Entrar a la habitación de Marge">
+                <span class="frame"><span class="glass"><img src="assets/marge.svg" alt=""></span></span>
+                <span class="name">Marge<small>Tech Lead</small></span>
+              </a>
+
+              <div class="door" aria-hidden="true"><i class="knob"></i><i class="peephole"></i></div>
+
+              <a class="window arch" data-room="maggie" href="maggie.html" aria-label="Entrar a la habitación de Maggie">
+                <span class="frame"><span class="glass"><img src="assets/maggie.svg" alt=""></span></span>
+                <span class="name">Maggie<small>Junior Dev</small></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- garage con la ventanita del logo -->
+        <div class="wing garage" aria-hidden="true">
+          <div class="gable"><div class="attic"><img src="assets/logo.png" alt=""></div></div>
+          <div class="facade"><div class="garage-door"></div></div>
+          <div class="driveway"></div>
+        </div>
+      </div>
+      </div><!-- /scene -->
+
+      <div class="lawn" aria-hidden="true">
+        <span class="mailbox"></span>
+        <span class="sidewalk"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Hecho con 🍩 y mucho café por <strong>Donuts &amp; Code</strong> · ¡D'oh!</p>
+  </footer>
+
+</body>
+</html>
