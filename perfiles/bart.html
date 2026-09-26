@@ -8,9 +8,10 @@
   <link rel="icon" href="assets/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;800&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;800&family=Fredoka:wght@400;500;600&family=Gochi+Hand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/room.css">
+  <link rel="stylesheet" href="../css/pizarra.css">
 </head>
 <body class="room bart">
 
@@ -122,6 +123,28 @@
         </article>
       </div>
 
+      <section class="panel pizarra-widget" aria-labelledby="pizarra-t">
+        <h2 id="pizarra-t"><span aria-hidden="true">🖍️</span> La pizarra de Bart</h2>
+        <p class="pizarra-intro">Bart está castigado y tiene que escribir en la pizarra. Escribí un mensaje de commit, hacé commit y mirá cómo lo escribe.</p>
+
+        <div class="pizarra-board">
+          <div class="pizarra-frame">
+            <div class="pizarra-surface" id="pizarraLineas" role="log" aria-label="Pizarrón de Bart" aria-live="polite"></div>
+            <span class="pizarra-tray" aria-hidden="true"></span>
+          </div>
+          <img class="pizarra-bart" src="../assets/bart-icon.png" alt="Bart escribiendo en el pizarrón">
+        </div>
+
+        <form class="pizarra-form" id="pizarraForm" autocomplete="off">
+          <label for="pizarraInput">Mensaje del commit</label>
+          <div class="pizarra-fila">
+            <input type="text" id="pizarraInput" maxlength="60" placeholder="feat: agrego la pizarra de Bart">
+            <button type="submit" class="pizarra-commit">Commit</button>
+          </div>
+          <button type="button" id="pizarraBorrar" class="pizarra-borrar">Borrar pizarrón</button>
+          <p class="pizarra-msg" id="pizarraMsg" aria-live="polite">Escribí un mensaje y hacé commit para que Bart lo escriba.</p>
+        </form>
+      </section>
     </section>
 
     <nav class="visit" aria-label="Otras habitaciones">
@@ -136,5 +159,8 @@
   </main>
 
   <footer class="room-foot"><p>Hecho con 🍩 por <strong>Donuts &amp; Code</strong> · los datos son inventados, ¡D'oh!</p></footer>
+
+<script src="../assets/js/pizarra.js"></script>
+
 </body>
 </html>
