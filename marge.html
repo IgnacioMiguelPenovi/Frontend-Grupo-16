@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;800&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/room.css">
+  <link rel="stylesheet" href="css/peinado.css">
 </head>
 <body class="room marge">
 
@@ -90,11 +91,11 @@
 
     <section class="profile" aria-labelledby="nombre">
       <div class="who">
-        <h1 id="nombre" class="simpsons-title">Marge Simpson</h1>
+        <h1 id="nombre" class="simpsons-title">Eliana Moguilevsky</h1>
         <p class="role">Tech Lead · DevOps</p>
         <p class="bio">Mantiene al equipo unido y el deploy en orden. Su peinado tiene espacio para guardar todo el backlog, y siempre hay una dona lista antes de la retro.</p>
         <ul class="chips" aria-label="Etiquetas">
-          <li>DevOps</li><li>Bash &amp; YAML</li><li>Code review con cariño</li><li>🍩 Chef</li>
+          <li>Capacidad analítica</li><li>Orientación al usuario</li><li>Visión integral</li><li>Pensamiento crítico</li>
         </ul>
       </div>
 
@@ -102,31 +103,58 @@
         <article class="panel movies" aria-labelledby="peli-t">
           <h2 id="peli-t"><span aria-hidden="true">🎬</span> Películas favoritas</h2>
           <ol>
-            <li><div><strong>Ratatouille</strong><small>2007 · cocinar es para cualquiera</small></div></li>
-            <li><div><strong>Mamma Mia!</strong><small>2008 · cantada de principio a fin</small></div></li>
-            <li><div><strong>Amélie</strong><small>2001 · pequeños gestos, grandes efectos</small></div></li>
-            <li><div><strong>Orgullo y prejuicio</strong><small>2005 · con té y pañuelos</small></div></li>
-            <li><div><strong>La novicia rebelde</strong><small>1965 · sí, se sabe todas las canciones</small></div></li>
+            <li><div><strong>Volver al futuro</strong><small>1985 · Viajes en el tiempo, aventuras y una buena dosis de humor.</small></div></li>
+            <li><div><strong>Atrápame si puedes</strong><small>2002 · Ingenio, identidad y una persecución que nunca termina.</small></div></li>
+            <li><div><strong>Sexto Sentido</strong><small>1999 · Una historia de misterio, emociones y un giro inolvidable.</small></div></li>
           </ol>
         </article>
 
         <article class="panel songs" aria-labelledby="song-t">
           <h2 id="song-t"><span aria-hidden="true">🎵</span> Canciones favoritas</h2>
           <ol>
-            <li><div><strong>Dancing Queen</strong><small>ABBA</small></div></li>
-            <li><div><strong>Here Comes the Sun</strong><small>The Beatles</small></div></li>
-            <li><div><strong>Don't Stop Believin'</strong><small>Journey</small></div></li>
-            <li><div><strong>Ain't No Mountain High Enough</strong><small>Marvin Gaye &amp; Tammi Terrell</small></div></li>
-            <li><div><strong>La vie en rose</strong><small>Édith Piaf</small></div></li>
+            <li><div><strong>Burning Love</strong><small>Elvis Presley · 1972 · Pasión, energía y una voz imposible de ignorar.</small></div></li>
+            <li><div><strong>Here Comes the Sun</strong><small>The Beatles · 1969 · Optimismo, calidez y la sensación de que todo vuelve a estar bien.</small></div></li>
+            <li><div><strong>November Rain</strong><small>Guns'n'Rosess · 1991 · Melancolía, intensidad y una historia de amor épica.</small></div></li>
           </ol>
         </article>
       </div>
 
-      <dl class="facts">
-        <div><dt>Dona favorita</dt><dd>Clásica glaseada rosa</dd></div>
-        <div><dt>Frase típica</dt><dd>“Hmmmmm.”</dd></div>
-        <div><dt>Editor</dt><dd>VS Code, con muchos temas</dd></div>
-      </dl>
+   <section class="panel peinado-widget" aria-labelledby="peinado-t">
+  <h2 id="peinado-t"><span aria-hidden="true">💈</span> El peinado interactivo de Marge</h2>
+  <p class="peinado-intro">Usá el deslizador para cambiar la altura del peinado de Marge y descubrí los objetos ocultos dentro de sus rulos azules.</p>
+
+  <div class="peinado-stage">
+    <div class="peinado-mini">
+      <span class="donut" aria-hidden="true">🍩</span>
+      <div class="hair" id="margeHair">
+        <span class="hair-object" data-reveal="120">🍩</span>
+        <span class="hair-object" data-reveal="180">🖌️</span>
+        <span class="hair-object" data-reveal="240">🎷</span>
+        <span class="hair-object" data-reveal="300">💯</span>
+      </div>
+      <span class="eyes" aria-hidden="true">👀</span>
+      <span class="beads" aria-hidden="true">📿📿📿</span>
+    </div>
+  </div>
+
+  <p class="peinado-medida">Altura del peinado: <strong id="peinadoMetros">1.80</strong> metros</p>
+  <label class="peinado-slider-label" for="peinadoRango">Ajustar altura del peinado (px):</label>
+  <input type="range" id="peinadoRango" min="80" max="320" step="5" value="180">
+
+  <hr class="peinado-sep">
+
+  <div class="peinado-esconder">
+    <h3>Esconder un objeto en el pelo:</h3>
+    <div class="peinado-objetos" role="radiogroup" aria-label="Elegí un objeto para esconder">
+      <label><input type="radio" name="objetoOculto" value="🍩"> 🍩 Rosquilla</label>
+      <label><input type="radio" name="objetoOculto" value="🖌️"> 🖌️ Pincel CSS</label>
+      <label><input type="radio" name="objetoOculto" value="🎷"> 🎷 Saxofón</label>
+      <label><input type="radio" name="objetoOculto" value="💯"> 💯 Nota 10</label>
+    </div>
+    <button type="button" id="guardarObjeto" class="btn-guardar">Guardar en el peinado</button>
+    <p class="peinado-msg" id="peinadoMsg" aria-live="polite">Seleccioná un objeto para guardarlo en el peinado de Marge.</p>
+  </div>
+</section>
     </section>
 
     <nav class="visit" aria-label="Otras habitaciones">
@@ -141,5 +169,9 @@
   </main>
 
   <footer class="room-foot"><p>Hecho con 🍩 por <strong>Donuts &amp; Code</strong> · los datos son inventados, ¡D'oh!</p></footer>
+
+<script src="./assets/js/index.js"></script>
+<script src="./assets/js/peinado.js"></script>
+
 </body>
 </html>
