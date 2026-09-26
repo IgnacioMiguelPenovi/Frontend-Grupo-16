@@ -59,8 +59,8 @@
   position: relative;
   isolation: isolate;
   width: min(600px, calc(100% - 28px));
-  margin-top: -26px;
-  padding: clamp(34px, 6vw, 52px) clamp(30px, 6vw, 58px);
+  margin-top: 14px;
+  padding: clamp(34px, 6vw, 52px) clamp(30px, 6vw, 58px) clamp(46px, 7vw, 62px);
   color: var(--ink);
   background: var(--smoke);
   border-radius: 58% 42% 55% 45% / 52% 58% 42% 48%;
@@ -84,8 +84,8 @@
   border-radius: 50%;
   box-shadow: inset -8px -10px 18px rgba(60, 70, 90, .25);
 }
-.puff::before { width: 34%; aspect-ratio: 1; top: -16%; left: 8%; }
-.puff::after  { width: 28%; aspect-ratio: 1; bottom: -14%; right: 10%; }
+.puff::before { width: clamp(64px, 13vw, 96px); aspect-ratio: 1; top: -26px; left: 8%; }
+.puff::after  { width: clamp(52px, 10vw, 72px); aspect-ratio: 1; bottom: -24px; right: 10%; }
 .puff:nth-child(even)::before { left: auto; right: 12%; }
 .puff:nth-child(even)::after  { right: auto; left: 12%; }
 
@@ -122,6 +122,7 @@
   font-size: clamp(1.35rem, 4.5vw, 1.8rem);
   line-height: 1.15;
 }
+.puff p { margin: 0; text-align: center; }
 .puff ul { margin: 0 0 12px; padding: 0 0 0 1.2em; }
 .puff li { margin-bottom: 4px; }
 .puff li::marker { content: "🍩  "; }
@@ -238,6 +239,5 @@
 @media (max-width: 520px) {
   .puff:nth-child(odd)  { --dx: -3%; }
   .puff:nth-child(even) { --dx:  3%; }
-  .puff { margin-top: 8px; padding-bottom: 44px; }
-  .puff::before { top: -10%; }
+  .puff { margin-top: 12px; }
 }
