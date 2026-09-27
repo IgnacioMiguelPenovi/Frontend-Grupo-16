@@ -71,8 +71,16 @@
         </g>
 
         <!-- Maggie -->
-        <image class="char" href="assets/maggie.svg" x="370" y="54" width="260" height="338"/>
-
+       <defs>
+  <radialGradient id="fadeMask" cx="50%" cy="45%" r="55%">
+    <stop offset="70%" stop-color="white"/>
+    <stop offset="100%" stop-color="black"/>
+  </radialGradient>
+  <mask id="avatarMask">
+    <rect x="370" y="54" width="260" height="338" fill="url(#fadeMask)"/>
+  </mask>
+</defs>
+<image class="char" href="../assets/avatar-celeste.png" x="370" y="54" width="260" height="338" mask="url(#avatarMask)"/>
         <!-- cuna -->
         <g stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round">
           <rect x="234" y="340" width="520" height="120" fill="url(#bars)" stroke="none"/>
@@ -99,28 +107,28 @@
         <article class="panel movies" aria-labelledby="peli-t">
           <h2 id="peli-t"><span aria-hidden="true">🎬</span> Películas favoritas</h2>
           <ol>
-            <li><div><strong>Buscando a Nemo</strong><small>2003 · ¡sigue nadando!</small></div></li>
-            <li><div><strong>Toy Story</strong><small>1995 · los juguetes cobran vida</small></div></li>
-            <li><div><strong>Frozen</strong><small>2013 · la vio en loop</small></div></li>
-            <li><div><strong>Moana</strong><small>2016 · el mar la eligió</small></div></li>
-            <li><div><strong>Encanto</strong><small>2021 · sí, hablan de Bruno</small></div></li>
+            <li><div><strong>El diario de una pasión</strong><small>Eres mi presente, mi pasado y mi futuro</small></div></li>
+            <li><div><strong>Titanic</strong><small>Aprenderas a aceptar la vida tal y como viene.. para que cada dia valga la pena</small></div></li>
+            <li><div><strong>Mujer bonita</strong><small>Te ves bellisima </small></div></li>
+            <li><div><strong>Leyenda de pasion</strong><small>Algunas personas oyen su voz interior con total claridad y viven de acuerdo con lo que ella les dicta. Esas personas se vuelven locas... o se convierten en leyendas</small></div></li>
+            <li><div><strong>El secreto de sus ojos</strong><small>El tipo puede cambiar de todo: de cara, de casa, de familia... de novia, de religión, de Dios... pero hay una cosa que no puede cambiar, Benjamín... no puede cambiar de pasión</small></div></li>
           </ol>
         </article>
 
         <article class="panel songs" aria-labelledby="song-t">
           <h2 id="song-t"><span aria-hidden="true">🎵</span> Canciones favoritas</h2>
           <ol>
-            <li><div><strong>Baby Shark</strong><small>Pinkfong</small></div></li>
-            <li><div><strong>Twinkle Twinkle Little Star</strong><small>Canción de cuna</small></div></li>
-            <li><div><strong>Let It Go</strong><small>Idina Menzel</small></div></li>
-            <li><div><strong>We Don't Talk About Bruno</strong><small>Encanto</small></div></li>
-            <li><div><strong>Rock-a-bye Baby</strong><small>Canción de cuna</small></div></li>
+            <li><div><strong>Creo</strong><small>Callejeros</small></div></li>
+            <li><div><strong>Vas a bailar</strong><small>Ciro y los persas</small></div></li>
+            <li><div><strong>Rompecabezas de amor</strong><small>Las pastillas del abuelo</small></div></li>
+            <li><div><strong>Me vas a extrañar</strong><small>Damas gratis</small></div></li>
+            <li><div><strong>Donde estas corazón</strong><small>Los del fuego</small></div></li>
           </ol>
         </article>
       </div>
 
       <dl class="facts">
-        <div><dt>Dona favorita</dt><dd>La que le queda más cerca</dd></div>
+        <div><dt>Dona favorita</dt><dd>La que tenga mas DDL</dd></div>
         <div><dt>Frase típica</dt><dd>*chupete chupete*</dd></div>
         <div><dt>Editor</dt><dd>Uno con letras enormes</dd></div>
       </dl>

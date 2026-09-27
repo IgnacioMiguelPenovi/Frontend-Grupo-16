@@ -621,3 +621,58 @@
   .row.up { gap: 26px; }
   .plant .tag { display: none; }
 }
+
+
+/* ---------- Garaje interactivo ---------- */
+.wing.garage .facade {
+  position: relative;
+}
+
+.garage-door {
+  cursor: pointer;
+  transition: transform .6s ease;
+  transform-origin: top;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.garage.is-open .garage-door {
+  transform: scaleY(0.05);
+}
+
+.garage.is-open .facade {
+  padding: 0;
+}
+
+.garage-inside {
+  position: absolute;
+  inset: -3% 0 0 0;
+  z-index: 1;
+  overflow: hidden;
+  background: #111;
+}
+
+.garage-inside img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.garage-inside[hidden] {
+  display: none;
+}
+
+/* ---------- Avatar de perfil ---------- */
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--ink);
+  box-shadow: 0 0 0 4px #fff, 0 0 0 8px var(--ink);
+  display: block;
+  margin: 0 auto 12px;
+}
