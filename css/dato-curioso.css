@@ -1,0 +1,47 @@
+:root {
+  /* --- color: paleta clásica de la serie --- */
+  --tinta:            #241F1A;  
+  --blanco:           #FFFFFF;
+  --pink:             #ff4fa0; 
+  --radio: 18px;
+  --sombra: 0 6px 0 rgba(36, 31, 26, 0.9);
+  --borde: 3px solid var(--tinta);
+}
+.caja-dinamica {
+  margin-top: 34px;
+  background: var(--pink);
+  border: var(--borde);
+  border-radius: var(--radio);
+  padding: 26px;
+  text-align: center;
+}
+.caja-dinamica h3 { margin-bottom: 8px; }
+.resultado-dinamico {
+  margin-top: 18px;
+  min-height: 60px;
+  background: var(--blanco);
+  border: 2px dashed var(--tinta);
+  border-radius: 12px;
+  padding: 16px;
+  font-weight: 600;
+}
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--fuente-texto);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: var(--borde);
+  background: var(--amarillo-piel);
+  color: var(--tinta);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--sombra);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.boton:hover { transform: translateY(-2px); }
+.boton:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(36,31,26,0.9); }
+.boton.secundario { background: var(--blanco); }
