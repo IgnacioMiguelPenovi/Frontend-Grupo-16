@@ -66,6 +66,17 @@ y abrir `http://localhost:8000/index.html`. Abrir los archivos `.html` directo d
 
 Las decisiones, dificultades y cambios del proyecto se fueron registrando en [bitacora.html](bitacora.html), accesible desde el menu principal de cualquier pagina.
 
+## Evolución del proyecto
+
+En futuros trabajos se continuara ampliando y mejorando el proyecto mediante:
+
+- Incorporacion de nuevas funcionalidades.
+- Mejoras en el diseño y la experiencia de usuario.
+- Adaptacion y optimizacion para diferentes dispositivos.
+- Incorporacion de nuevas secciones y perfiles de personajes.
+- Implementacion de funcionalidades dinámicas mediante JavaScript.
+- Integracion con una base de datos para almacenar y gestionar informacion.
+
 ## Uso de IA
 
 Para este proyecto usamos Claude (plan premium) como herramienta de apoyo para escribir codigo y acelerar el proceso de produccion. La idea de la pagina, el diseno y la estructura fueron pensados enteramente por nosotros; tambien fuimos nosotros quienes revisamos que lo pedido en la consigna se cumpliera, tanto en el HTML como en el CSS y el JavaScript.
