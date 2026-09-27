@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;800&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/room.css">
+  <link rel="stylesheet" href="../css/dato-curioso.css">
 </head>
 <body class="room lisa">
 
@@ -156,6 +157,13 @@
       </dl>
     </section>
 
+    <div class="caja-dinamica">
+      <h3>Dato curioso de Liza</h3>
+      <p>Un botón, un dato de cultura general sobre tecnología. Ideal para cortar el silencio en una reunión de equipo.</p>
+      <button class="boton secundario" id="boton-liza" type="button">Mostrar dato</button>
+      <div class="resultado-dinamico" id="resultado-liza" aria-live="polite">Esperando un dato curioso...</div>
+    </div>
+
     <nav class="visit" aria-label="Otras habitaciones">
       <h2>Visitá otras habitaciones</h2>
       <ul>
@@ -168,5 +176,7 @@
   </main>
 
   <footer class="room-foot"><p>Hecho con 🍩 por <strong>Donuts &amp; Code</strong> · los datos son inventados, ¡D'oh!</p></footer>
+
+  <script src="../index.js"></script>
 </body>
 </html>

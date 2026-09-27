@@ -1,0 +1,197 @@
+/* ===== La pizarra de Bart (perfil de Ignacio) ===== */
+
+.pizarra-widget { text-align: center; margin-top: 24px; }
+
+.pizarra-intro {
+  max-width: 52ch;
+  margin: 0 auto 22px;
+  font-size: 1.05rem;
+}
+
+/* ---------- pizarron ---------- */
+.pizarra-board {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding-bottom: 26px;
+}
+
+.pizarra-frame {
+  position: relative;
+  padding: 14px;
+  background: linear-gradient(#b5764a, #8b5a2b);
+  border: 4px solid var(--ink);
+  border-radius: 14px;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, .25);
+}
+
+.pizarra-surface {
+  --lines: 6;
+  position: relative;
+  min-height: calc(var(--lines) * 2.1rem + 32px);
+  padding: 16px 20px;
+  overflow: hidden;
+  text-align: left;
+  color: #f4f7f2;
+  font-family: "Gochi Hand", "Comic Sans MS", "Segoe Print", cursive;
+  font-size: clamp(1.2rem, 3.6vw, 1.65rem);
+  line-height: 2.1rem;
+  background:
+    radial-gradient(ellipse at 20% 15%, rgba(255, 255, 255, .10), transparent 55%),
+    radial-gradient(ellipse at 80% 85%, rgba(255, 255, 255, .06), transparent 50%),
+    #2c4a3d;
+  border: 3px solid var(--ink);
+  border-radius: 6px;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, .45);
+}
+
+.pizarra-vacia {
+  margin: 0;
+  color: rgba(244, 247, 242, .45);
+  font-style: italic;
+}
+
+.pizarra-line {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  overflow-wrap: anywhere;
+  animation: pizarra-in .25s ease-out;
+}
+.pizarra-hash {
+  flex: none;
+  color: #ffd23f;
+  opacity: .9;
+}
+.pizarra-text { min-width: 0; }
+.pizarra-line.is-typing .pizarra-text::after {
+  content: "";
+  display: inline-block;
+  width: .5ch;
+  height: 1.05em;
+  margin-left: 3px;
+  vertical-align: text-bottom;
+  background: #f4f7f2;
+  animation: pizarra-caret .6s steps(1) infinite;
+}
+@keyframes pizarra-caret { 50% { opacity: 0; } }
+@keyframes pizarra-in { from { opacity: 0; transform: translateY(6px); } }
+
+/* bandeja con tiza y borrador */
+.pizarra-tray {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: -14px;
+  height: 12px;
+  background: #7a4a2a;
+  border: 3px solid var(--ink);
+  border-radius: 0 0 8px 8px;
+}
+.pizarra-tray::before {
+  content: "";
+  position: absolute;
+  left: 14%;
+  top: -10px;
+  width: 30px;
+  height: 8px;
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+}
+.pizarra-tray::after {
+  content: "";
+  position: absolute;
+  right: 14%;
+  top: -14px;
+  width: 54px;
+  height: 12px;
+  background: #d9603b;
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, .25);
+}
+
+/* Bart, al costado del pizarron */
+.pizarra-bart {
+  position: absolute;
+  right: -6px;
+  bottom: 0;
+  width: clamp(72px, 16vw, 110px);
+  z-index: 2;
+  transform-origin: 50% 100%;
+  filter: drop-shadow(0 4px 0 rgba(0, 0, 0, .25));
+}
+.pizarra-bart.is-writing { animation: bart-escribe .35s ease-in-out infinite alternate; }
+@keyframes bart-escribe {
+  from { transform: rotate(-5deg) translateX(0); }
+  to   { transform: rotate(3deg) translateX(-8px); }
+}
+
+/* ---------- formulario ---------- */
+.pizarra-form {
+  max-width: 720px;
+  margin: 26px auto 0;
+  text-align: left;
+}
+.pizarra-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.pizarra-fila {
+  display: flex;
+  gap: 10px;
+}
+.pizarra-fila input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 16px;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+}
+.pizarra-fila input::placeholder { color: #77778f; }
+
+.pizarra-commit, .pizarra-borrar {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform .15s, box-shadow .15s;
+}
+.pizarra-commit {
+  padding: 10px 22px;
+  background: var(--pink);
+  color: #fff;
+  box-shadow: 0 4px 0 var(--ink);
+}
+.pizarra-borrar {
+  margin-top: 12px;
+  padding: 6px 16px;
+  background: #fff;
+  box-shadow: 0 3px 0 var(--ink);
+}
+.pizarra-commit:hover, .pizarra-borrar:hover { transform: translateY(-2px); }
+.pizarra-commit:active, .pizarra-borrar:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--ink); }
+
+.pizarra-msg {
+  margin: 12px 0 0;
+  min-height: 1.5em;
+  font-weight: 500;
+}
+
+@media (max-width: 520px) {
+  .pizarra-fila { flex-direction: column; }
+  .pizarra-commit { align-self: flex-start; }
+  .pizarra-surface { padding: 12px 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pizarra-bart.is-writing { animation: none; }
+}
