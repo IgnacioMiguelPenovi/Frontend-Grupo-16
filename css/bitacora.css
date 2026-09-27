@@ -96,6 +96,12 @@
 /* los mas nuevos (arriba) aparecen mas grandes y difusos */
 .puff:first-child { width: min(660px, calc(100% - 28px)); }
 
+/* laptop / tablet grande: nubes un poco mas angostas que en desktop */
+@media (max-width: 1200px) {
+  .puff { width: min(500px, calc(100% - 28px)); }
+  .puff:first-child { width: min(540px, calc(100% - 28px)); }
+}
+
 .puff .meta {
   display: flex;
   flex-wrap: wrap;
@@ -236,7 +242,7 @@
 .log-foot p { margin: 0; }
 .log-foot a { color: var(--yellow); }
 
-@media (max-width: 520px) {
+@media (max-width: 400px) {
   .puff:nth-child(odd)  { --dx: -3%; }
   .puff:nth-child(even) { --dx:  3%; }
   .puff { margin-top: 12px; }
