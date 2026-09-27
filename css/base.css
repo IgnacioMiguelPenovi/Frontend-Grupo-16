@@ -77,7 +77,7 @@ a { color: inherit; }
 .topbar nav a:hover { background: var(--yellow); transform: translateY(-1px); }
 .topbar nav a[aria-current="page"] { background: var(--pink); color: #fff; }
 
-@media (max-width: 520px) {
+@media (max-width: 400px) {
   .brand span { display: none; }
   .topbar nav a { padding: 6px 10px; font-size: .95rem; }
 }

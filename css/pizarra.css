@@ -186,7 +186,7 @@
   font-weight: 500;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 400px) {
   .pizarra-fila { flex-direction: column; }
   .pizarra-commit { align-self: flex-start; }
   .pizarra-surface { padding: 12px 14px; }
