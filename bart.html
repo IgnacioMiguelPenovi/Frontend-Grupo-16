@@ -3,29 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bart · Donuts &amp; Code</title>
-  <meta name="description" content="La habitación de Bart: sus películas y canciones favoritas.">
-  <link rel="icon" href="assets/logo.png">
+  <title>Ignacio · Donuts &amp; Code</title>
+  <meta name="description" content="La habitación de Ignacio: sus películas y canciones favoritas.">
+  <link rel="icon" href="img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;800&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/room.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;800&family=Fredoka:wght@400;500;600&family=Gochi+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/room.css">
+  <link rel="stylesheet" href="css/pizarra.css">
 </head>
 <body class="room bart">
 
   <header class="topbar">
-    <a class="brand" href="../index.html"><img src="assets/logo.png" alt=""><span>Donuts &amp; Code</span></a>
+    <a class="brand" href="index.html"><img src="img/logo.png" alt=""><span>Donuts &amp; Code</span></a>
     <nav aria-label="Principal">
-      <a href="../index.html#casa">← La casa</a>
-      <a href="../bitacora.html">Bitácora</a>
+      <a href="index.html#casa">← La casa</a>
+      <a href="bitacora.html">Bitácora</a>
     </nav>
   </header>
 
   <main class="room-main">
 
     <div class="stage-frame">
-      <svg class="stage" viewBox="0 0 1000 460" preserveAspectRatio="xMidYMid slice" role="img" aria-label="La habitación de Bart, con su escritorio, un skate y un póster de Bartman">
+      <svg class="stage" viewBox="0 0 1000 460" preserveAspectRatio="xMidYMid slice" role="img" aria-label="La habitación de Ignacio, con su escritorio, un skate y un póster de Bartman">
         <defs>
           <pattern id="wall" width="64" height="64" patternUnits="userSpaceOnUse">
             <rect width="64" height="64" fill="#5aa9e6"/>
@@ -43,7 +44,7 @@
         <rect x="-4" y="326" width="1008" height="16" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
 
         <!-- ventana con cortinas -->
-        <image href="../assets/room-window.svg" x="70" y="50" width="200" height="211"/>
+        <image href="img/room-window.svg" x="70" y="50" width="200" height="211"/>
         <rect x="52" y="40" width="236" height="9" rx="4" fill="#5a3a2e" stroke="#1a1a1a" stroke-width="3"/>
         <rect x="58" y="49" width="34" height="220" rx="4" fill="#ffd23f" stroke="#1a1a1a" stroke-width="3"/>
         <rect x="248" y="49" width="34" height="220" rx="4" fill="#ffd23f" stroke="#1a1a1a" stroke-width="3"/>
@@ -63,8 +64,8 @@
           <circle cx="-30" cy="34" r="8" fill="#fff"/><circle cx="-30" cy="142" r="8" fill="#fff"/>
         </g>
 
-        <!-- Bart -->
-        <image class="char" href="assets/bart.svg" x="370" y="54" width="260" height="338"/>
+        <!-- Ignacio -->
+        <image class="char" href="img/avatar-ignacio.png" x="335" y="89" width="330" height="303"/>
 
         <!-- escritorio -->
         <g stroke="#1a1a1a" stroke-width="4" stroke-linejoin="round">
@@ -90,11 +91,11 @@
 
     <section class="profile" aria-labelledby="nombre">
       <div class="who">
-        <h1 id="nombre" class="simpsons-title">Bart Simpson</h1>
-        <p class="role">Chief of Pranks · Frontend</p>
-        <p class="bio">Rompe cosas, pero siempre con estilo. Especialista en encontrar bugs… justo después de haberlos creado. Sus commits llevan más emojis que código.</p>
+        <h1 id="nombre" class="simpsons-title">Ignacio Miguel Penovi</h1>
+        <p class="role">Low level programing</p>
+        <p class="bio">Me gusta ir cerca del metal: motores de juegos en C++ y Unreal, y apps multiplataforma con Kotlin.</p>
         <ul class="chips" aria-label="Etiquetas">
-          <li>🛹 Skate</li><li>JavaScript</li><li>Bug hunter</li><li>Cero tarea, cien memes</li>
+          <li>📍 Mar del Plata</li><li>🎂 22 años</li><li>C++</li><li>UE</li><li>Kotlin</li><li>Compose MP</li>
         </ul>
       </div>
 
@@ -102,44 +103,64 @@
         <article class="panel movies" aria-labelledby="peli-t">
           <h2 id="peli-t"><span aria-hidden="true">🎬</span> Películas favoritas</h2>
           <ol>
-            <li><div><strong>Volver al Futuro</strong><small>1985 · por el skate y el DeLorean</small></div></li>
-            <li><div><strong>Mi pobre angelito</strong><small>1990 · trampas caseras, su sueño</small></div></li>
-            <li><div><strong>Jurassic Park</strong><small>1993 · "los dinosaurios sí pueden ser mascotas"</small></div></li>
-            <li><div><strong>La máscara</strong><small>1994 · fuente de inspiración pícara</small></div></li>
-            <li><div><strong>Toy Story</strong><small>1995 · sí, la vio 14 veces</small></div></li>
+            <li><div><strong>El código Da Vinci</strong><small>2006</small></div></li>
+            <li><div><strong>Cars 2</strong><small>2011</small></div></li>
+            <li><div><strong>Moana</strong><small>2016</small></div></li>
+            <li><div><strong>Knives Out</strong><small>2019</small></div></li>
+            <li><div><strong>Interstellar</strong><small>2014</small></div></li>
           </ol>
         </article>
 
         <article class="panel songs" aria-labelledby="song-t">
-          <h2 id="song-t"><span aria-hidden="true">🎵</span> Canciones favoritas</h2>
+          <h2 id="song-t"><span aria-hidden="true">🎵</span> Discos favoritos</h2>
           <ol>
-            <li><div><strong>Smells Like Teen Spirit</strong><small>Nirvana</small></div></li>
-            <li><div><strong>Bulls on Parade</strong><small>Rage Against the Machine</small></div></li>
-            <li><div><strong>Sabotage</strong><small>Beastie Boys</small></div></li>
-            <li><div><strong>Highway to Hell</strong><small>AC/DC</small></div></li>
-            <li><div><strong>Bad Guy</strong><small>Billie Eilish</small></div></li>
+            <li><div><strong>Chronologic</strong><small>Caravan Palace</small></div></li>
+            <li><div><strong>&lt;|°_°|&gt;</strong><small>Caravan Palace</small></div></li>
+            <li><div><strong>Renaissance</strong><small>Apashe</small></div></li>
           </ol>
         </article>
       </div>
 
-      <dl class="facts">
-        <div><dt>Dona favorita</dt><dd>Chocolate con lluvia de colores</dd></div>
-        <div><dt>Frase típica</dt><dd>"¡Ay, caramba!"</dd></div>
-        <div><dt>Editor</dt><dd>El de Lisa, prestado</dd></div>
-      </dl>
+      <section class="panel pizarra-widget" aria-labelledby="pizarra-t">
+        <h2 id="pizarra-t"><span aria-hidden="true">🖍️</span> La pizarra de Bart</h2>
+        <p class="pizarra-intro">Bart está castigado y tiene que escribir en la pizarra. Escribí un mensaje de commit, hacé commit y mirá cómo lo escribe.</p>
+
+        <div class="pizarra-board">
+          <div class="pizarra-frame">
+            <div class="pizarra-surface" id="pizarraLineas" role="log" aria-label="Pizarrón de Bart" aria-live="polite"></div>
+            <span class="pizarra-tray" aria-hidden="true"></span>
+          </div>
+          <img class="pizarra-bart" src="img/bart-icon.png" alt="Bart escribiendo en el pizarrón">
+        </div>
+
+        <form class="pizarra-form" id="pizarraForm" autocomplete="off">
+          <label for="pizarraInput">Mensaje del commit</label>
+          <div class="pizarra-fila">
+            <input type="text" id="pizarraInput" maxlength="60" placeholder="feat: agrego la pizarra de Bart">
+            <button type="submit" class="pizarra-commit">Commit</button>
+          </div>
+          <button type="button" id="pizarraBorrar" class="pizarra-borrar">Borrar pizarrón</button>
+          <p class="pizarra-msg" id="pizarraMsg" aria-live="polite">Escribí un mensaje y hacé commit para que Bart lo escriba.</p>
+        </form>
+      </section>
     </section>
 
     <nav class="visit" aria-label="Otras habitaciones">
       <h2>Visitá otras habitaciones</h2>
       <ul>
-        <li><a href="lisa.html"><img class="avatar lisa" src="../assets/lisa.png" alt="">Lisa</a></li>
-        <li><a href="marge.html"><img class="avatar marge" src="../assets/marge.png" alt="">Marge</a></li>
-        <li><a href="maggie.html"><img class="avatar maggie" src="../assets/maggie.png" alt="">Maggie</a></li>
-        <li><a href="../bitacora.html"><img class="avatar plant-icon" src="../assets/tower.svg" alt="">Bitácora</a></li>
-      </ul>
+
+        <li><a href="lisa.html"><img class="avatar lisa" src="img/lisa.png" alt="">Lisa</a></li>
+        <li><a href="marge.html"><img class="avatar marge" src="img/marge.png" alt="">Marge</a></li>
+        <li><a href="maggie.html"><img class="avatar maggie" src="img/maggie.png" alt="">Maggie</a></li>
+        <li><a href="bitacora.html"><img class="avatar plant-icon" src="img/tower.svg" alt="">Bitácora</a></li>
+
     </nav>
   </main>
 
   <footer class="room-foot"><p>Hecho con 🍩 por <strong>Donuts &amp; Code</strong> · los datos son inventados, ¡D'oh!</p></footer>
+
+  <script src="js/index.js"></script>
+ <!-- <script src="img/js/pizarra.js"></script> -->
+
 </body>
 </html>

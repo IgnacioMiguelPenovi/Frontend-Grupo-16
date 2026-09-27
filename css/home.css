@@ -245,6 +245,12 @@
 .wing.main { flex: 0 0 68%; }
 .wing.garage { flex: 1; }
 
+/* laptop / tablet grande: casa y torre un poco mas angostas que en desktop */
+@media (max-width: 1200px) {
+  .house { max-width: 760px; }
+  .skyline { max-width: 760px; }
+}
+
 .roof {
   position: relative;
   isolation: isolate;
@@ -611,7 +617,7 @@
 .foot p { margin: 0; }
 
 /* ---------- mobile ---------- */
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .scene { padding: 0 8px; }
   .house { flex-direction: column; align-items: stretch; }
   .wing.main { flex: none; }
