@@ -69,3 +69,5 @@ Las decisiones, dificultades y cambios del proyecto se fueron registrando en [bi
 ## Uso de IA
 
 Para este proyecto usamos Claude (plan premium) como herramienta de apoyo para escribir codigo y acelerar el proceso de produccion. La idea de la pagina, el diseno y la estructura fueron pensados enteramente por nosotros; tambien fuimos nosotros quienes revisamos que lo pedido en la consigna se cumpliera, tanto en el HTML como en el CSS y el JavaScript.
+
+Para la generacion del avatar de Ester en lisa.html se usó Meta AI en su versión gratuita. Prompt usado: "Convierte esta imagen en un divertido personaje de los simpson, con un vestido rojo infantil sin mangas" (a esto se le agrego una foto real de Ester para que se base en ella).
