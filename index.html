@@ -111,12 +111,18 @@
           </div>
         </div>
 
-        <!-- garage con la ventanita del logo -->
-        <div class="wing garage" aria-hidden="true">
-          <div class="gable"><div class="attic"><img src="img/logo.png" alt=""></div></div>
-          <div class="facade"><div class="garage-door"></div></div>
-          <div class="driveway"></div>
-        </div>
+       <!-- garage con la ventanita del logo -->
+<div class="wing garage" id="garage" aria-label="Garaje: Homero, Moe y el Sr. Burns">
+  <div class="gable"><div class="attic"><img src=src="img/logo.png" alt=""></div></div>
+  <div class="facade">
+    <button type="button" class="garage-door" id="garage-door" aria-expanded="false" aria-controls="garage-inside">
+    </button>
+    <div class="garage-inside" id="garage-inside" hidden>
+      <img src="img/garage-bar.webp alt="Homero, Moe y el Sr. Burns en el bar">
+    </div>
+  </div>
+  <div class="driveway"></div>
+</div>
       </div>
       </div><!-- /scene -->
 
@@ -130,6 +136,19 @@
   <footer class="foot">
     <p>Hecho con 🍩 y mucho café por <strong>Donuts &amp; Code</strong> · ¡D'oh!</p>
   </footer>
+<script>
+  const garage = document.getElementById('garage');
+  const garageDoor = document.getElementById('garage-door');
+  const garageInside = document.getElementById('garage-inside');
 
+  function toggleGarage() {
+    const isOpen = garage.classList.toggle('is-open');
+    garageDoor.setAttribute('aria-expanded', isOpen);
+    garageInside.hidden = !isOpen;
+  }
+
+  garageDoor.addEventListener('click', toggleGarage);
+  garageInside.addEventListener('click', toggleGarage);
+</script>
 </body>
 </html>
