@@ -11,9 +11,9 @@ Landing del grupo **Donuts & Code**, con tematica de Los Simpsons: la portada es
 | Nombre | Perfil en el sitio | GitHub |
 |---|---|---|
 | Ignacio Miguel Penovi | [bart.html](bart.html) | https://github.com/IgnacioMiguelPenovi |
-| Ester | [lisa.html](lisa.html) | https://github.com/Kira-Blan |
+| Ester Mosquera | [lisa.html](lisa.html) | https://github.com/Kira-Blan |
 | Eliana Moguilevsky | [marge.html](marge.html) | https://github.com/ElianaMoguilevsky |
-| Celeste | [maggie.html](maggie.html) | https://github.com/mcdileonardo-alt |
+| Ma.Celeste Di Leonardo | [maggie.html](maggie.html) | https://github.com/mcdileonardo-alt |
 
 ## Tecnologías utilizadas
 * **HTML5 Semántico:** Estructura limpia y accesible (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`).
@@ -40,9 +40,9 @@ Landing del grupo **Donuts & Code**, con tematica de Los Simpsons: la portada es
 ├── lisa.html          Perfil de Ester
 ├── marge.html         Perfil de Eliana
 ├── maggie.html        Perfil de Celeste
-├── css/                Una hoja de estilos por pantalla/seccion
-├── js/                 JavaScript del sitio (index.js)
-└── img/                Imagenes, avatares e iconos
+├── css/               Una hoja de estilos por pantalla/seccion
+├── js/                JavaScript del sitio (index.js)
+└── img/               Imagenes, avatares e iconos
 ```
 
 Cada pagina HTML vive en la raiz del repositorio. El CSS, el JavaScript y las imagenes estan separados en sus propias carpetas y son compartidos por todas las paginas.
