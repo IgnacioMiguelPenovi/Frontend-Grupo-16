@@ -287,3 +287,64 @@ function initPizarraBart() {
 }
 
 document.addEventListener('DOMContentLoaded', initPizarraBart);
+
+ (() => {
+    const area = document.getElementById('j-area');
+    const objetivo = document.getElementById('j-objetivo');
+    const elPuntos = document.getElementById('j-puntos');
+    const elTiempo = document.getElementById('j-tiempo');
+    const elRecord = document.getElementById('j-record');
+    const btn = document.getElementById('j-empezar');
+
+    let puntos = 0, tiempo = 20, valor = 1;
+    let reloj = null, movedor = null;
+    let record = 0;
+    try { record = Number(localStorage.getItem('maggie-record')) || 0; } catch (e) {}
+    elRecord.textContent = record;
+
+    function colocar() {
+      const esDona = Math.random() < 0.2;
+      objetivo.textContent = esDona ? '🍩' : '🍼';
+      valor = esDona ? 3 : 1;
+      const maxX = Math.max(0, area.clientWidth - 56);
+      const maxY = Math.max(0, area.clientHeight - 56);
+      objetivo.style.left = Math.random() * maxX + 'px';
+      objetivo.style.top = Math.random() * maxY + 'px';
+    }
+
+    function terminar() {
+      clearInterval(reloj);
+      clearInterval(movedor);
+      objetivo.hidden = true;
+      if (puntos > record) {
+        record = puntos;
+        elRecord.textContent = record;
+        try { localStorage.setItem('maggie-record', record); } catch (e) {}
+      }
+      btn.textContent = '¡Otra vez! (hiciste ' + puntos + ')';
+      btn.hidden = false;
+    }
+
+    function empezar() {
+      puntos = 0;
+      tiempo = 20;
+      elPuntos.textContent = 0;
+      elTiempo.textContent = 20;
+      btn.hidden = true;
+      objetivo.hidden = false;
+      colocar();
+      movedor = setInterval(colocar, 900);
+      reloj = setInterval(() => {
+        tiempo--;
+        elTiempo.textContent = tiempo;
+        if (tiempo <= 0) terminar();
+      }, 1000);
+    }
+
+    objetivo.addEventListener('click', () => {
+      puntos += valor;
+      elPuntos.textContent = puntos;
+      colocar();
+    });
+    btn.addEventListener('click', empezar);
+  })();
