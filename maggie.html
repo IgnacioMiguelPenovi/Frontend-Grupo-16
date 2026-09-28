@@ -11,7 +11,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;800&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/room.css">
+  <link rel="stylesheet" href="css/room.css">
+
+  <style>
+    .juego { max-width: 640px; margin: 24px auto; padding: 0 16px; text-align: center; }
+    .juego-info { font-size: 1.1rem; margin: 8px 0 12px; }
+    .juego-area {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      background: #ffd6ec;
+      border: 4px solid #1a1a1a;
+      border-radius: 16px;
+    }
+    .juego-objetivo {
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      font-size: 2.4rem;
+      line-height: 1;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      transition: transform .1s;
+    }
+    .juego-objetivo:active { transform: scale(1.3); }
+    .juego-btn {
+      margin-top: 14px;
+      padding: 10px 24px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      background: #7b4a2b;
+      border: 3px solid #1a1a1a;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body class="room maggie">
 
   <header class="topbar">
@@ -95,7 +133,7 @@
 
     <section class="profile" aria-labelledby="nombre">
       <div class="who">
-        <h1 id="nombre" class="simpsons-title">Maggie Simpson</h1>
+        <h1 id="nombre" class="simpsons-title">María Celeste Di Leonardo</h1>
         <p class="role">Junior Dev · Chupete-Driven Development</p>
         <p class="bio">Casi no habla, pero sus commits siempre pasan los tests. Aprende más rápido que todos, duerme la siesta durante las daily y nunca suelta el chupete.</p>
         <ul class="chips" aria-label="Etiquetas">
@@ -143,12 +181,88 @@
         <li><a href="bitacora.html"><img class="avatar plant-icon" src="img/tower.svg" alt="">Bitácora</a></li>
       </ul>
     </nav>
+      
+
+    <section class="juego" aria-labelledby="juego-t">
+      <h2 id="juego-t">¡Atrapá las mamaderas de Maggie!</h2>
+      <p class="juego-info">
+        Puntos: <b id="j-puntos">0</b> · Tiempo: <b id="j-tiempo">20</b> · Récord: <b id="j-record">0</b>
+      </p>
+      <div class="juego-area" id="j-area">
+        <button type="button" class="juego-objetivo" id="j-objetivo" hidden>🍼</button>
+      </div>
+      <button type="button" class="juego-btn" id="j-empezar">¡Empezar!</button>
+    </section>
+
   </main>
 
-  <footer class="room-foot"><p>Hecho con 🍩 por <strong>Donuts &amp; Code</strong> · los datos son inventados, ¡D'oh!</p>
-  </footer>
 
-   <script src="js/index.js"></script>
+
+
+
+    <script src="js/index.js"></script>
+
+  <script>
+  (() => {
+    const area = document.getElementById('j-area');
+    const objetivo = document.getElementById('j-objetivo');
+    const elPuntos = document.getElementById('j-puntos');
+    const elTiempo = document.getElementById('j-tiempo');
+    const elRecord = document.getElementById('j-record');
+    const btn = document.getElementById('j-empezar');
+
+    let puntos = 0, tiempo = 20, valor = 1;
+    let reloj = null, movedor = null;
+    let record = 0;
+    try { record = Number(localStorage.getItem('maggie-record')) || 0; } catch (e) {}
+    elRecord.textContent = record;
+
+    function colocar() {
+      const esDona = Math.random() < 0.2;
+      objetivo.textContent = esDona ? '🍩' : '🍼';
+      valor = esDona ? 3 : 1;
+      const maxX = Math.max(0, area.clientWidth - 56);
+      const maxY = Math.max(0, area.clientHeight - 56);
+      objetivo.style.left = Math.random() * maxX + 'px';
+      objetivo.style.top = Math.random() * maxY + 'px';
+    }
+
+    function terminar() {
+      clearInterval(reloj);
+      clearInterval(movedor);
+      objetivo.hidden = true;
+      if (puntos > record) {
+        record = puntos;
+        elRecord.textContent = record;
+        try { localStorage.setItem('maggie-record', record); } catch (e) {}
+      }
+      btn.textContent = '¡Otra vez! (hiciste ' + puntos + ')';
+      btn.hidden = false;
+    }
+
+    function empezar() {
+      puntos = 0;
+      tiempo = 20;
+      elPuntos.textContent = 0;
+      elTiempo.textContent = 20;
+      btn.hidden = true;
+      objetivo.hidden = false;
+      colocar();
+      movedor = setInterval(colocar, 900);
+      reloj = setInterval(() => {
+        tiempo--;
+        elTiempo.textContent = tiempo;
+        if (tiempo <= 0) terminar();
+      }, 1000);
+    }
+
+    objetivo.addEventListener('click', () => {
+      puntos += valor;
+      elPuntos.textContent = puntos;
+      colocar();
+    });
+    btn.addEventListener('click', empezar);
+  })();
+  </script>
 
 </body>
-</html>
