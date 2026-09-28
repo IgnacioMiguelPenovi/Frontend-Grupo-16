@@ -247,3 +247,52 @@
   .puff:nth-child(even) { --dx:  3%; }
   .puff { margin-top: 12px; }
 }
+
+/* ---------- visitar otras habitaciones (mismo estilo que room.css) ---------- */
+.log-foot .visit { margin-top: 0; text-align: center; }
+.log-foot .visit h2 {
+  margin: 0 0 16px;
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  color: #fff;
+  text-shadow: 0 2px 0 var(--ink);
+}
+.log-foot .visit ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.log-foot .visit a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 18px 6px 6px;
+  color: var(--ink);
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: 0 4px 0 var(--ink);
+  text-decoration: none;
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: 1.1rem;
+  transition: transform .2s, background .2s;
+}
+.log-foot .visit a:hover { transform: translateY(-3px); background: var(--yellow); }
+.log-foot .visit .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid var(--ink);
+  object-fit: cover;
+  object-position: 50% 30%;
+  background: #bfe6fb;
+}
+.log-foot .visit .avatar.lisa   { background: #b39ddb; }
+.log-foot .visit .avatar.marge  { background: #ffe08a; }
+.log-foot .visit .avatar.maggie { background: #ffc1dc; }
+.log-foot .visit .avatar.bart { background: #5aa9e6; }
