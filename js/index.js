@@ -348,3 +348,18 @@ document.addEventListener('DOMContentLoaded', initPizarraBart);
     });
     btn.addEventListener('click', empezar);
   })();
+
+  // Dinámica del garage de la portada
+  const garage = document.getElementById('garage');
+  const garageDoor = document.getElementById('garage-door');
+  const garageInside = document.getElementById('garage-inside');
+
+  function toggleGarage() {
+  const isOpen = garage.classList.toggle('is-open');
+  garageDoor.setAttribute('aria-expanded', isOpen);
+  garageDoor.style.visibility = isOpen ? 'hidden' : 'visible';
+  garageInside.hidden = !isOpen;
+}
+
+  garageDoor.addEventListener('click', toggleGarage);
+  garageInside.addEventListener('click', toggleGarage);
