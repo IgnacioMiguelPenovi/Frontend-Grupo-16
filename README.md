@@ -38,11 +38,25 @@ Todas las paginas tienen, en la barra superior, un link a la portada ("La casa")
 
 Todo el JavaScript del sitio esta centralizado en `js/index.js`. Cada funcion se activa solo cuando encuentra en la pagina los elementos que le corresponden, asi un mismo archivo sirve para todas las paginas sin que se pisen entre si.
 
-- **Portada:** pendiente de agregar una interaccion propia.
+- **Portada (`index.html`):** el garage de la casa se abre al hacer clic en la puerta y muestra la escena escondida adentro; un segundo clic lo vuelve a cerrar.
+
+  ![El garage de la casa abierto, con la escena escondida adentro](img/garage-abierto.png)
+
 - **Perfil de Ignacio (`bart.html`):** la pizarra de Bart. Se escribe un mensaje de commit en un input y, al confirmarlo, Bart lo escribe letra por letra en el pizarron del salon, con un hash corto adelante como si fuera un commit real. El pizarron guarda hasta 6 mensajes y los recuerda entre visitas (`localStorage`).
+
+  ![La pizarra de Bart, con dos commits ya escritos en el pizarrón](img/pizarra-bart.png)
+
 - **Perfil de Ester (`lisa.html`):** un boton que muestra un dato curioso de programacion al azar, elegido de una lista fija.
+
+  ![Dato curioso de Ester, con un botón y el dato mostrado en pantalla](img/dato-curioso-ester.png)
+
 - **Perfil de Eliana (`marge.html`):** el peinado interactivo de Marge. Un slider controla la altura del peinado y va revelando objetos escondidos adentro a medida que sube.
-- **Perfil de Celeste (`maggie.html`):**
+
+  ![El peinado interactivo de Marge, con el slider y los objetos escondidos](img/peinado-eliana.png)
+
+- **Perfil de Celeste (`maggie.html`):** un minijuego de 20 segundos donde hay que atrapar las mamaderas que van apareciendo en pantalla (y, de vez en cuando, una dona que vale mas puntos). El puntaje y el tiempo se actualizan en vivo, y el mejor puntaje queda guardado entre visitas (`localStorage`).
+
+  ![El juego de atrapar las mamaderas de Maggie, con los puntos, el tiempo y el récord](img/juego-celeste.png)
 
 ## Diseno responsive
 
