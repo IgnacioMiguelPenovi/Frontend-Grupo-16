@@ -350,6 +350,8 @@ document.addEventListener('DOMContentLoaded', initPizarraBart);
   })();
 
   // Dinámica del garage de la portada
+ 
+
   const garage = document.getElementById('garage');
   const garageDoor = document.getElementById('garage-door');
   const garageInside = document.getElementById('garage-inside');
