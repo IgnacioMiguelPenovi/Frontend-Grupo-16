@@ -1,0 +1,63 @@
+/* ===== Juego de Maggie: ¡Atrapá las mamaderas! ===== */
+/* Usa las variables de css/base.css (--ink, --brown, --font-body) */
+
+.juego {
+  max-width: 640px;
+  /* 24px arriba (igual que entre paneles); abajo no hay margen porque
+     el espacio hasta "Visitá otras habitaciones" lo da .visit (46px) */
+  margin: 24px auto 0;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.juego-info {
+  font-size: 1.1rem;
+  margin: 8px 0 12px;
+}
+
+.juego-area {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  background: #ffd6ec;
+  border: 4px solid var(--ink);
+  border-radius: 16px;
+}
+
+/* OJO: no le pongas "display" a esta regla, porque el atributo [hidden]
+   del HTML depende de que el navegador pueda ocultarlo con display:none */
+.juego-objetivo {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  font-size: 2.4rem;
+  line-height: 1;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transition: transform .1s;
+}
+.juego-objetivo:active { transform: scale(1.3); }
+
+.juego-btn {
+  margin-top: 14px;
+  padding: 10px 24px;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--brown);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.juego-btn:focus-visible,
+.juego-objetivo:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .juego-objetivo { transition: none; }
+}
