@@ -4,14 +4,31 @@ Landing del grupo **Donuts & Code**, con tematica de Los Simpsons: la portada es
 
 **Link Vercel:** https://frontend-grupo-16-pi.vercel.app/
 
+**Repositorio Github:** https://github.com/IgnacioMiguelPenovi/Frontend-Grupo-16.git
+
 ## Integrantes
 
 | Nombre | Perfil en el sitio | GitHub |
 |---|---|---|
 | Ignacio Miguel Penovi | [bart.html](bart.html) | https://github.com/IgnacioMiguelPenovi |
-| Ester | [lisa.html](lisa.html) | https://github.com/Kira-Blan |
+| Ester Mosquera | [lisa.html](lisa.html) | https://github.com/Kira-Blan |
 | Eliana Moguilevsky | [marge.html](marge.html) | https://github.com/ElianaMoguilevsky |
-| Celeste | [maggie.html](maggie.html) | https://github.com/mcdileonardo-alt |
+| Ma.Celeste Di Leonardo | [maggie.html](maggie.html) | https://github.com/mcdileonardo-alt |
+
+## Tecnologías utilizadas
+* **HTML5 Semántico:** Estructura limpia y accesible (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`).
+* **CSS3 Custom (Nativo):** Maquetado fluido con Flexbox, CSS Grid y variables CSS.
+* **JavaScript ES6+:** Manipulación del DOM, eventos, animaciones y persistencia con `localStorage`.
+* **Google Fonts:** Tipografías temáticas externas.
+
+## Guía de estilos e identidad visual
+* **Tipografías:** `Baloo 2` (títulos y encabezados) y `Fredoka` (texto principal).
+* **Paleta de Colores (Springfield):**
+  * Amarillo Simpson (Acentos): `#FED90F`
+  * Azul Cielo (Hero/Fondo): `#70D1F4`
+  * Rosa Rosquilla (CTAs): `#FF4FA0`
+  * Tinta Oscura (Bordes/Contornos): `#1B1B2F`
+  * Papel/Fondo Claro: `#FFFDF3`
 
 ## Estructura del proyecto
 
@@ -23,9 +40,9 @@ Landing del grupo **Donuts & Code**, con tematica de Los Simpsons: la portada es
 ├── lisa.html          Perfil de Ester
 ├── marge.html         Perfil de Eliana
 ├── maggie.html        Perfil de Celeste
-├── css/                Una hoja de estilos por pantalla/seccion
-├── js/                 JavaScript del sitio (index.js)
-└── img/                Imagenes, avatares e iconos
+├── css/               Una hoja de estilos por pantalla/seccion
+├── js/                JavaScript del sitio (index.js)
+└── img/               Imagenes, avatares e iconos
 ```
 
 Cada pagina HTML vive en la raiz del repositorio. El CSS, el JavaScript y las imagenes estan separados en sus propias carpetas y son compartidos por todas las paginas.
@@ -81,8 +98,14 @@ En futuros trabajos se continuara ampliando y mejorando el proyecto mediante:
 - Implementacion de funcionalidades dinámicas mediante JavaScript.
 - Integracion con una base de datos para almacenar y gestionar informacion.
 
-## Uso de IA
+## Declaración de Uso de Inteligencia Artificial
 
-Para este proyecto usamos Claude (plan premium) como herramienta de apoyo para escribir codigo y acelerar el proceso de produccion. La idea de la pagina, el diseno y la estructura fueron pensados enteramente por nosotros; tambien fuimos nosotros quienes revisamos que lo pedido en la consigna se cumpliera, tanto en el HTML como en el CSS y el JavaScript.
+### Asistentes Utilizados
+* **Gemini Notebook (Modelo de Lenguaje - LLM):** Utilizado como workbench agentico de soporte técnico y auditoría de código.
+* **Claude (Plan Premium):** Utilizado para asistencia en la ideación y maquetación de lógica inicial en HTML, CSS y JavaScript.
+* **Meta AI (Versión Gratuita):** Utilizada exclusivamente para la generación de los avatares temáticos a partir de un prompt guiado (por ejemplo *"Convierte esta imagen en un divertido personaje de los simpson, con un vestido rojo infantil sin mangas"* sobre una foto real).
 
-Para la generacion del avatar de Ester en lisa.html se usó Meta AI en su versión gratuita. Prompt usado: "Convierte esta imagen en un divertido personaje de los simpson, con un vestido rojo infantil sin mangas" (a esto se le agrego una foto real de Ester para que se base en ella).
+### Criterio de Supervisión y Control Humano
+Toda la arquitectura del sitio, la temática de Los Simpsons, la maquetación CSS propia, el diseño de interfaces y la lógica funcional de las interacciones fueron concebidos, revisados, probados e integrados manualmente por el equipo (Ignacio, Ester, Eliana y Celeste). El código generado o sugerido por las herramientas de IA fue auditado y adaptado para garantizar el total entendimiento y control técnico sobre la solución entregada.
+
+
