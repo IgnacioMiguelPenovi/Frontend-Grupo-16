@@ -296,6 +296,8 @@ document.addEventListener('DOMContentLoaded', initPizarraBart);
     const elRecord = document.getElementById('j-record');
     const btn = document.getElementById('j-empezar');
 
+    if (!area || !objetivo || !elPuntos || !elTiempo || !elRecord || !btn) return; // el juego no está en esta página
+
     let puntos = 0, tiempo = 20, valor = 1;
     let reloj = null, movedor = null;
     let record = 0;
@@ -354,12 +356,14 @@ document.addEventListener('DOMContentLoaded', initPizarraBart);
   const garageDoor = document.getElementById('garage-door');
   const garageInside = document.getElementById('garage-inside');
 
-  function toggleGarage() {
-  const isOpen = garage.classList.toggle('is-open');
-  garageDoor.setAttribute('aria-expanded', isOpen);
-  garageDoor.style.visibility = isOpen ? 'hidden' : 'visible';
-  garageInside.hidden = !isOpen;
-}
+  if (garage && garageDoor && garageInside) {
+    function toggleGarage() {
+      const isOpen = garage.classList.toggle('is-open');
+      garageDoor.setAttribute('aria-expanded', isOpen);
+      garageDoor.style.visibility = isOpen ? 'hidden' : 'visible';
+      garageInside.hidden = !isOpen;
+    }
 
-  garageDoor.addEventListener('click', toggleGarage);
-  garageInside.addEventListener('click', toggleGarage);
+    garageDoor.addEventListener('click', toggleGarage);
+    garageInside.addEventListener('click', toggleGarage);
+  }
