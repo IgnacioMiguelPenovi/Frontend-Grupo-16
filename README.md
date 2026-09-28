@@ -52,16 +52,6 @@ El sitio usa tres breakpoints en todas las paginas:
 - `900px`: la casa y las tarjetas pasan de una grilla a una columna.
 - `1200px`: en pantallas de notebook, el contenido se angosta un poco respecto del ancho maximo de escritorio.
 
-## Como verlo en local
-
-El sitio es HTML, CSS y JavaScript sin build. Alcanza con levantar un servidor estatico en la raiz del proyecto, por ejemplo:
-
-```
-python -m http.server 8000
-```
-
-y abrir `http://localhost:8000/index.html`. Abrir los archivos `.html` directo desde el explorador de archivos no funciona del todo bien, porque algunas rutas relativas necesitan que el sitio se sirva por http.
-
 ## Bitacora
 
 Las decisiones, dificultades y cambios del proyecto se fueron registrando en [bitacora.html](bitacora.html), accesible desde el menu principal de cualquier pagina.
