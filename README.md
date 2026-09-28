@@ -104,6 +104,7 @@ En futuros trabajos se continuara ampliando y mejorando el proyecto mediante:
 * **Gemini Notebook (Modelo de Lenguaje - LLM):** Utilizado como workbench agentico de soporte técnico y auditoría de código.
 * **Claude (Plan Premium):** Utilizado para asistencia en la ideación y maquetación de lógica inicial en HTML, CSS y JavaScript.
 * **Meta AI (Versión Gratuita):** Utilizada exclusivamente para la generación de los avatares temáticos a partir de un prompt guiado (por ejemplo *"Convierte esta imagen en un divertido personaje de los simpson, con un vestido rojo infantil sin mangas"* sobre una foto real).
+* **Github Copilot (Versión Gratuita):** Utilizado para asistir en mensajes de commits y escritura/correción de código.
 
 ### Criterio de Supervisión y Control Humano
 Toda la arquitectura del sitio, la temática de Los Simpsons, la maquetación CSS propia, el diseño de interfaces y la lógica funcional de las interacciones fueron concebidos, revisados, probados e integrados manualmente por el equipo (Ignacio, Ester, Eliana y Celeste). El código generado o sugerido por las herramientas de IA fue auditado y adaptado para garantizar el total entendimiento y control técnico sobre la solución entregada.
